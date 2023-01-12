@@ -65,15 +65,15 @@ nav:
       - 「01」初学C语言: BLOG/C/First-learnC1.md
       - 「02」初学C语言: BLOG/C/First-learnC2.md
       -  不太明白的语法: BLOG/C/ignorantOfSyntax.md
-    - JAVA:
+    - JAVA
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
-    - Markdowm:
+    - Markdowm
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
-    - MacOS:
+    - MacOS
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
