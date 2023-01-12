@@ -1,8 +1,10 @@
-site_name: 王韬安的个人网站
+# [Info]
+site_name: 王韬安的个人网站 # 左上角标题
 site_url: https://wang-taoan.github.io
 site_author: 王韬安
 site_description: 王韬安的个人网站
 
+# [UI]
 theme:
   name: material
   palette:
@@ -50,10 +52,45 @@ extra:
   social: # icons
     - icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/506537329?spm_id_from=333.337.0.0
-      name: 勇敢的湍流 on bilibili # 鼠标悬浮提示
+      name: 勇敢的湍流 on Bilibili # 鼠标悬浮提示
     - icon: fontawesome/brands/github
       link: https://github.com/Wang-Taoan
       name: Wang-Taoan on Github
+
+# [Navigtion]
+nav:
+  - 博客:
+    - BLOG/index.md
+    - C:
+      - 「01」初学C语言: BLOG/C/First-learnC1.md
+      - 「02」初学C语言: BLOG/C/First-learnC2.md
+      -  不太明白的语法: BLOG/C/ignorantOfSyntax.md
+    - JAVA:
+      #- 文章1:<相对路径>
+      #- 文章2:<相对路径>
+      #- 文章3:<相对路径>
+    - Markdowm:
+      #- 文章1:<相对路径>
+      #- 文章2:<相对路径>
+      #- 文章3:<相对路径>
+    - MacOS:
+      #- 文章1:<相对路径>
+      #- 文章2:<相对路径>
+      #- 文章3:<相对路径>
+  - 关于:
+    - ABOUT/index.md
+    - 作者信息: ABOUT/information.md
+    - 网站构建: ABOUT/bulid.md
+    - 支持作者: ABOUT/support.md
+    
+    
+
+
+
+
+
+
+
 
 markdown_extensions:
   - pymdownx.arithmatex: # latex支持
