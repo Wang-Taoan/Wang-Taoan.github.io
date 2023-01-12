@@ -73,7 +73,7 @@ plugins:
   - search:
       lang: en
   - tags
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: date
+  # - git-revision-date-localized: # 不知道怎么用不了
+     # enable_creation_date: true #https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
+      # type: date
   - meta
