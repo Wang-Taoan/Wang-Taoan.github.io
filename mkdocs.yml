@@ -6,13 +6,13 @@ site_description: 王韬安的个人网站
 theme:
   name: material
   palette:
-    - media: "(prefers-color-scheme: light)"
+    - scheme: default # 日间模式
       primary: indigo # 主题颜色
       accent: amber # 链接等可交互元件的高亮色
       toggle:
         icon: material/brightness-7 # 图标
         name: 切换至夜间模式 # 鼠标悬浮提示
-    - media: "(prefers-color-scheme: dark)"
+    - scheme: slate # 夜间模式
       primary: indigo
       accent: amber
       toggle:
