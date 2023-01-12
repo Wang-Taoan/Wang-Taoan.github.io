@@ -14,5 +14,4 @@ title: 支持作者
 
 **微信支付** **WeChat Pay**
 
-![](./images/Wechat.JPG)
-{width="300"}
+![](./images/Wechat.JPG){width="300"}
