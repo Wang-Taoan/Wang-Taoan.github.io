@@ -29,7 +29,7 @@ theme:
   language: zh # 一些提示性的文字会变成中文
   icon:
     repo: fontawesome/brands/github
-    logo: simple-datadog # logo查询https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+    logo: simple/datadog # logo查询https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
 repo_url: https://github.com/Wang-Taoan/Wang-Taoan.github.io #右上角跳转的链接
