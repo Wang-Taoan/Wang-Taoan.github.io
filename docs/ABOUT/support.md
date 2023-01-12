@@ -10,8 +10,9 @@ title: 支持作者
 
 **支付宝** **Alipay**
 
-![](./images/Alipay.jpg){width="300"}
+![](./images/Alipay.JPG){width="300"}
 
 **微信支付** **WeChat Pay**
 
-![](./images/Wechat.jpg){width="300"}
+![](./images/Wechat.JPG)
+{width="300"}
