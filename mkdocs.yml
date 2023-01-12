@@ -20,12 +20,20 @@ theme:
         name: 切换至日间模式  
   features:
     - content.tooltips
-    - navigation.tabs # 使用Tab来进行分类
+    - navigation.instant # Instant loading
+    - navigation.tracking #Anchor tracking 不知道有什么用
+    - navigation.tabs # 使用Tab来进行分类，就是顶层的tabs菜单
+    - navigation.tabs.sticky # 锁住Tabs，向下划的时候，上面的tabs不会消失
+    - navigation.sections # 对左边菜单栏的优化，主标题加粗
     - navigation.top # 返回顶部的按钮 在上滑时出现
     - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
     - navigation.expand # 打开Tab时左侧目录全部展开
+    - toc.follow # the sidebar is automatically scrolled so that active anchor is always visible
     - search.suggest # 搜索输入一些字母时推荐补全整个单词
     - search.highlight # 搜索出的文章关键词加入高亮
+    - search.share # 搜索中会出现的分享按钮
+    - header.autohide # 当用户滚动超过一定阈值时，留出更多的内容空间
+    - navigation.footer # previous and next page of the current page的链接
   language: zh # 一些提示性的文字会变成中文
   icon:
     repo: fontawesome/brands/github
@@ -42,9 +50,30 @@ extra:
   social: # icons
     - icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/506537329?spm_id_from=333.337.0.0
-      name: Bilibili | 勇敢的湍流 # 鼠标悬浮提示
+      name: 勇敢的湍流 on bilibili # 鼠标悬浮提示
     - icon: fontawesome/brands/github
       link: https://github.com/Wang-Taoan
-      name: GitHub | Wang-Taoan 
+      name: Wang-Taoan on Github
 
-
+markdown_extensions:
+  - pymdownx.arithmatex: # latex支持
+      generic: true
+  - attr_list # 给图片后面添加{width="300"}设置大小
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight # 代码块高亮
+      # linenums: true # 显示行号
+      # auto_title: true # 显示编程语言名称
+  - pymdownx.superfences # 代码块高亮插件
+  #- meta # 支持Markdown文件上方自定义标题标签等
+  - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
+  - pymdownx.details # admonition需要
+# [Extensions]
+plugins:
+  - search:
+      lang: en
+  - tags
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+  - meta
