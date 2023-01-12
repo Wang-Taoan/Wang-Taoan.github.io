@@ -65,7 +65,7 @@ markdown_extensions:
       # linenums: true # 显示行号
       # auto_title: true # 显示编程语言名称
   - pymdownx.superfences # 代码块高亮插件
-  #- meta # 支持Markdown文件上方自定义标题标签等
+  - abbr # 支持Markdown文件上方自定义标题标签等
   - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
   - pymdownx.details # admonition需要
 # [Extensions]
@@ -76,4 +76,4 @@ plugins:
   # - git-revision-date-localized: # 不知道怎么用不了
      # enable_creation_date: true #https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
       # type: date
-  - meta
+  
