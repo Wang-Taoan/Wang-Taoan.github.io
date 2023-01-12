@@ -1,3 +1,50 @@
-site_name: My Docs
+site_name: 王韬安的个人网站
+site_url: https://wang-taoan.github.io
+site_author: 王韬安
+site_description: 王韬安的个人网站
+
 theme:
   name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: indigo # 主题颜色
+      accent: amber # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/brightness-7 # 图标
+        name: 切换至夜间模式 # 鼠标悬浮提示
+    - media: "(prefers-color-scheme: dark)"
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: 切换至日间模式  
+  features:
+    - content.tooltips
+    - navigation.tabs # 使用Tab来进行分类
+    - navigation.top # 返回顶部的按钮 在上滑时出现
+    - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
+    - navigation.expand # 打开Tab时左侧目录全部展开
+    - search.suggest # 搜索输入一些字母时推荐补全整个单词
+    - search.highlight # 搜索出的文章关键词加入高亮
+  language: zh # 一些提示性的文字会变成中文
+  icon:
+    repo: fontawesome/brands/github
+    logo: simple-datadog # logo查询https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+edit_uri: edit/main/docs # 编辑按钮跳转的链接
+## [top-right corner]
+repo_url: https://github.com/Wang-Taoan/Wang-Taoan.github.io #右上角跳转的链接
+repo_name: Wang-taoan.github.io # 右上角的名字
+## [bottom-left corner]
+copyright: Copyright &copy; 2023 王韬安 # 左下角的版权声明
+## [bottom-right corner]
+extra:
+  homepage: https://wang-taoan.github.io/
+  social: # icons
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/506537329?spm_id_from=333.337.0.0
+      name: Bilibili | 勇敢的湍流 # 鼠标悬浮提示
+    - icon: fontawesome/brands/github
+      link: https://github.com/Wang-Taoan
+      name: GitHub | Wang-Taoan 
+
+
