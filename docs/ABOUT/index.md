@@ -1,9 +1,8 @@
 # Welcome to Taoan's site
 
-这里是Taoan的个人网站
-<https://wang-taoan.github.io/>
+> Last updated on 2023/1/13
 
-- 通过主题和目录打开文章
-    - PC端 在上方标签选择主题 在左侧目录选择文章
-    - 移动端 点击左上角图标选择主题和文章
+* [Taoan's site](https://wang-taoan.github.io/)  建立于 2023/01/12
+
+* 工欲善其事，必先利其器。
 
