@@ -105,12 +105,6 @@ nav:
     
 
 
-
-
-
-
-
-
 markdown_extensions:
   - pymdownx.arithmatex: # latex支持
       generic: true
