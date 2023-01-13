@@ -48,7 +48,7 @@ int addtwonum()
 >
 > 同时解释了为什么不可以用NULL来判断
 
-![img](https://xij53lomtq.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTZkNTc5M2UzZDkwMjhiN2EwYmNmZjZlYmEyZDczODRfaWxORzFwYm44SmpKZGR0eGNqTTBuTWpEZHZBTlVob2xfVG9rZW46Ym94Y25pWk5ETGhuRVBLNE51NzdaZmhsVlRlXzE2NzM1MzMzNTM6MTY3MzUzNjk1M19WNA)
+![](./images/S1.PNG){width="400"}
 
 - 解决：
 
@@ -75,7 +75,7 @@ printf("%s\n", str);` `puts(str);
 
 > 下图就是没有初始化的样子
 
-![img](https://xij53lomtq.feishu.cn/space/api/box/stream/download/asynccode/?code=MzliNzk4M2QyODc0ODBkNmIzZDIwMmQwYWIzNDRhODBfOWp4aFRNUnZFU3BGcXhHNWJhMGc1Qlg4VzQ1VzBYVFRfVG9rZW46Ym94Y25DMEtVVEFpR3JDa2J2MjNRMGxuN3ZmXzE2NzM1MzMzNTM6MTY3MzUzNjk1M19WNA)
+![img](./images/S2.png){width="300"}
 
 如何解决？
 
@@ -196,7 +196,7 @@ int main()//依次从个位开始提取，然后*10+%10，最后新数和旧数�
 
 ## 12.对通过指针传值的误解～
 
-![img](https://xij53lomtq.feishu.cn/space/api/box/stream/download/asynccode/?code=NjhiZjUyNmEyMTllMWRlMzQ3MTc4ODNmZmE1ZTM2MjRfYWNBTGRhMUtUeGY2QklPWGpvaGo2S3R1b3JQN3hrZnJfVG9rZW46Ym94Y253VjZTREh2OGh5d2hQN3Y1anRpZkVjXzE2NzM1MzMzNTM6MTY3MzUzNjk1M19WNA)
+![img](./images/S3.png){width="300"}
 
 如上左图所示：函数想要通过地址改变数值，是改变地址内的值，而不是改变整个地址值！！！
 
@@ -222,8 +222,8 @@ int main()//依次从个位开始提取，然后*10+%10，最后新数和旧数�
 
 在 C 语言中，字符串是以 null 结尾的一维字符数组。因此，可以使用数组赋值的方式来赋值字符串。
 
-![img](https://xij53lomtq.feishu.cn/space/api/box/stream/download/asynccode/?code=MjIxNDNjOTg5MTIzNTNkN2JjNmJjOWIzNWU5NDJiYjVfRnlBY2NydzJGMmhVZ2EwMTZ6MGZYUWJTdWxiakRMOFVfVG9rZW46Ym94Y24wa0c1VWpNS3FOaHBRUFV1RXA5WGxnXzE2NzM1MzMzNTM6MTY3MzUzNjk1M19WNA)
+![img](./images/S4.png){width="300"}
 
 > 注意，在使用第二种方式赋值时，必须手动添加 null 结尾符（'\0'），否则会导致程序的错误。
 
-![img](https://xij53lomtq.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjY1OWJlNDY3ZjI2MjU2ODY1NTllYTUwZTllOTgyNDRfVG9WUXF6QVBjemV0eGxpNENKeU5uYWswZWM3UkVidU1fVG9rZW46Ym94Y24wRjN0aERGdXpENG53Umx5dkZOVW9iXzE2NzM1MzMzNTM6MTY3MzUzNjk1M19WNA)
+![img](./images/S5.png){width="300"}

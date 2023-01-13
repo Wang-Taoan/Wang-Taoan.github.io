@@ -120,11 +120,11 @@ unsigned char buff[5]={1,2,3,4,5};
 
 **主要目的是为了改变指针指向地址的值**
 
-<img src="./images/2.png" style="zoom:80%;" />
+![](./images/2.png){width="300"}
 
 ## 6.格式化输入输出
 
-<img src="./images/3.png" style="zoom:50%;" />
+![](./images/3.png){width="300"}
 
 ## 7.Const和指针
 
