@@ -113,4 +113,5 @@ plugins:
   # - git-revision-date-localized: # 不知道怎么用不了
      # enable_creation_date: true #https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
       # type: date
-  
+extra_css: 
+  - mkdocs/css/unordered-list-symbols.css # multiplt unordered list symbols
