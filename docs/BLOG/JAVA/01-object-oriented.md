@@ -6,7 +6,7 @@
 
 定义类-创建对象-使用对象
 
-![img](./images/OO1.png){width="400"}
+![img](./images/OO1.PNG){width="400"}
 
 ### 类的补充知识
 

@@ -78,6 +78,24 @@ nav:
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
+  - 喜欢的东西:
+    - LIKETHINGS/index.md
+    - LIKE1
+      #- 文章1:<相对路径>
+      #- 文章2:<相对路径>
+      #- 文章3:<相对路径>
+    - LIKE2
+      #- 文章1:<相对路径>
+      #- 文章2:<相对路径>
+      #- 文章3:<相对路径>
+    - LIKE3
+      #- 文章1:<相对路径>
+      #- 文章2:<相对路径>
+      #- 文章3:<相对路径>
+  - 转载:
+    - REPRINT/index.md
+    - 提问的智慧: REPRINT/how-to-ask-questions-the-smart-way.md
+    - 持续.....: REPRINT/wait.md
   - 关于:
     - ABOUT/index.md
     - 作者信息: ABOUT/information.md
