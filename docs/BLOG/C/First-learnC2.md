@@ -11,31 +11,31 @@
 >
 > 优先级从高到低：增强运算符++、关系运算符>、条件运算符?、**赋值运算符+=**
 
-1.赋值优先级最差
+1. 赋值优先级最差
 
-2.大小于比？厉害
+2. 大小于比？厉害
 
 ##2.指针和数组；地址和变量
 
-> 1.数组**本身（指的是a）**表达的是地址：int *p = a;
+> 1. 数组**本身（指的是a）**表达的是地址：int *p = a;
 >
-> 2.**数组单元a[0]**表达的是变量，要用&取地址。a==&a[0];
+> 2. **数组单元a[0]**表达的是变量，要用&取地址。a==&a[0];
 
 ## 指针和数组的通用的东西
 
-1.**[ ]** 运算符可以对数组，也可以对指针。p[0]==a[0]
+1. **[ ]** 运算符可以对数组，也可以对指针。p[0]==a[0]
 
-2.* 运算法可以对指针，也可以对数组。*a=25
+2. * 运算法可以对指针，也可以对数组。*a=25
 
 ##3.区别字符%c和字符串%s
 
-> 1.字符%c只能输入输出一个字符
+> 1. 字符%c只能输入输出一个字符
 >
 > 例：char a[]="123"
 >
 > printf("%c",a[0]);    **//输出"1"**
 >
-> 2.字符串%s可以输入一串不超过20字符的字符串。
+> 2. 字符串%s可以输入一串不超过20字符的字符串。
 >
 >  printf("%s",a);    // **输出"123"**  
 
@@ -47,7 +47,7 @@
 >
 > **char b[字符的长度]="初始化赋值"**   
 
-​    **注意字符长度和赋值，必须选一个或者全写，不能都不选。\*/**
+​    **注意字符长度和赋值，必须选一个或者全写，不能都不选。**
 
 ​    例如：char b[123]="123";
 
@@ -79,7 +79,7 @@
 
 **虽然指针变量是指向别的内存地址的，但是变量本身还是需要一个地址空间来存储的**。
 
-**指针容易把人搞晕的就是，*****指针变量本身的存储地址*****和*****指向的地址*****分不清楚**，这个是**两个概念**，大家要记住了。
+**指针容易把人搞晕的就是，*****指针变量本身的存储地址*****和*****指向的地址*****分不清楚**，这个是**两个概念**，要记住了。
 
 printf("%x",&p)
 
@@ -114,20 +114,19 @@ unsigned char buff[5]={1,2,3,4,5};
 
 但是这个加减呢跟普通变量加减不一样，普通变量加减的是**数值**，而指针变量加减的是**地址.**
 
-![img](https://xij53lomtq.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWZjNDc1Y2RhMmU0ZDI3ZjEzYTlhMmNlYmQ3NTI1OTZfNXlKck41TzRPWU1DS05BSW1UV0VuazFHRUtUcjVRUjFfVG9rZW46Ym94Y25ZR2IzdlZEaXBxT0gxNTBZWTdlNnZlXzE2NzM1MzMxNTQ6MTY3MzUzNjc1NF9WNA)
+![](./images/1.png){width="400"}
 
 ### 3.指针变量作为函数形参
 
 **主要目的是为了改变指针指向地址的值**
 
-![img](https://xij53lomtq.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmM2MThjYzRkODBkY2QyNTY5ZjZlYzY5MDg3YzIxYzZfZ29LRTlyd2pOUEhzTVg2QmlWTUdrOEd5R1V3TG8wdTZfVG9rZW46Ym94Y25HUjZWdTFLbW0waW54NHlaWVZocDVkXzE2NzM1MzMxNTQ6MTY3MzUzNjc1NF9WNA)
+<img src="./images/2.png" style="zoom:80%;" />
 
 ## 6.格式化输入输出
 
-![img](https://xij53lomtq.feishu.cn/space/api/box/stream/download/asynccode/?code=MWI5MjYxNTliMjk1Y2U2YWMwN2RlZjRmMmE3Yzg0MzJfODk3cGpjQmRkMVZQNWhOM2dWRlloMHRScmVqbUFHTnRfVG9rZW46Ym94Y252cHg0c2IxQllOS01IM1pWSUVLWDNmXzE2NzM1MzMxNTQ6MTY3MzUzNjc1NF9WNA)
+<img src="./images/3.png" style="zoom:50%;" />
 
 ## 7.Const和指针
 
 const默认修饰左边的内容即左边的东西不变，如果左边没有东西则修饰其右边的内容
 
-![img](https://xij53lomtq.feishu.cn/space/api/box/stream/download/asynccode/?code=MGU1NWU2NzgyNWE4MjI0MGIxYzQwMjA3OTQ0NmUyMjVfQWhIM2pmYmNoN25ncURUbVpRWjRWOWFuYTdqWUFmR3lfVG9rZW46Ym94Y254WXR5aG1iZFFSQnRMVkRIeVJteUhiXzE2NzM1MzMxNTQ6MTY3MzUzNjc1NF9WNA)

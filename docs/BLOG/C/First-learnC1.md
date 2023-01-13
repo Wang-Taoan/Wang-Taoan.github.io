@@ -6,25 +6,18 @@
 
 ```C
 #include <stdio.h>
-
  int main()
-
 {
 
     /* 我的第一个 C 程序 */
-
     printf("Hello, World! \n");
-
- 
-
     return 0;
-
 }
 ```
 
 讲解一下上面一段代码结构
 
->  
+
 
 1. > *#include是预处理命令； <stdio.h>* 是头文件。告诉 C 编译器在实际编译之前要包含 stdio.h 文件
 
@@ -51,16 +44,10 @@
 ```C
 Int i ;
 
-
-
 for (int i=0,i< n,i++)
-
 { if (XXX);
-
     xxxxxx
-
     break;
-
 }
 
 Return i;
@@ -72,20 +59,21 @@ Return i;
 
 ##4.指针
 
-![img](https://xij53lomtq.feishu.cn/space/api/box/stream/download/asynccode/?code=YjNhOTVmMTA3YWU3ZjhhMzQ2NDgyYTIwODEwZTVlNWNfbFhiUWMzcjBmdWtaZVY0TnRLQ2h3MWhHZERiNzVnMk1fVG9rZW46Ym94Y240T1l3YTVrQXNGc3VWdUpONUl0YzJjXzE2NzM1MzMwNDA6MTY3MzUzNjY0MF9WNA)
-
-
-
 > 使用指针时会频繁进行以下几个操作：
-
+>
 > 1.**定义**一个指针变量、
-
+>
 > 2.把变量**地址赋值**给指针、
-
+>
 > 3.访问指针变量中可用地址的**值**。*p
 
 
 
 
 
+
+
 具体了解指针数组看菜鸟教程
+
+<https://www.runoob.com/cprogramming/c-pointers.html>
+
