@@ -131,7 +131,7 @@ o2是表示在有序序列中的元素
 
 - Lambda格式
 
-![img](./images/OO13.png){width="300"}
+![img](./images/OO13.png){width="400"}
 
 - 作用
 
@@ -163,7 +163,7 @@ o2是表示在有序序列中的元素
 
 单列集合的顶层接口
 
-![](./images/OO14.png){width="300"}
+![](./images/OO14.png){width="400"}
 
 
 
@@ -377,12 +377,12 @@ arr.forEach(consumer函数类接口)
    - 5个红黑规则：
 
 
-![img](./images/OO19.png){width="400"}
+![img](./images/OO19.png){width="500"}
 
 - 默认颜色：默认添加的节点是红色的，效率高
 - 添加节点的几种情况以及解决方法
 
-![img](./images/OO20.png){width="400"}
+![img](./images/OO20.png){width="500"}
 
 ### 简单认识Set
 
@@ -451,7 +451,7 @@ arr.forEach(consumer函数类接口)
 
 在新建集合对象的时候，自定义Comparator比较器，指定比较规则
 
-![img](./images/OO22.png){width="400"}
+![img](./images/OO22.png){width="500"}
 
 - 什么时候用方法二？
 

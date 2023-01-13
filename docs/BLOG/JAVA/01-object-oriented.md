@@ -6,7 +6,7 @@
 
 定义类-创建对象-使用对象
 
-![img](./images/OO1.png){width="300"}
+![img](./images/OO1.png){width="400"}
 
 ### 类的补充知识
 
@@ -71,7 +71,7 @@ javabean类：这个不写main
 
 代表标准
 
-![img](./images/OO2.png){width="300"}
+![img](./images/OO2.png){width="500"}
 
 ## 快捷键生成方法
 
@@ -111,7 +111,7 @@ win是`alt+insert`
 
 new、地址
 
-![img](./images/OO3.png){width="400"}
+![img](./images/OO3.png){width="500"}
 
 ## 键盘录入
 
@@ -407,7 +407,7 @@ Public class子类extends父类{ }
 
 子类能继承父类中哪些内容？
 
-![img](./images/OO5.png){width="300"}
+![img](./images/OO5.png){width="500"}
 
 > .class是叫字节码文件
 >
@@ -461,7 +461,7 @@ super用父类的
 
 ### this、super总结
 
-![img](./images/OO6.png){width="300"}
+![img](./images/OO6.png){width="500"}
 
 > This：理解为一个变量，表示当前方法调用者的地址值
 
@@ -567,7 +567,7 @@ Fu f= new zi();
 
 ### final
 
-![img](./images/OO7.png){width="300"}
+![img](./images/OO7.png){width="500"}
 
 > 修饰方法、类了解一下就可以
 
@@ -935,13 +935,13 @@ Bigdecimal.valueof
 
 > 在API中搜pattern可以查询
 
-![img](./images/OO9.png){width="300"}
+![img](./images/OO9.png){width="450"}
 
 - 总结
 
 ![img](./images/OO10.png){width="450"}
 
-![img](./images/OO11.png){width="300"}
+![img](./images/OO11.png){width="450"}
 
 ### 爬虫
 
