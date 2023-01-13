@@ -26,7 +26,7 @@ theme:
     - navigation.tracking #Anchor tracking 不知道有什么用
     - navigation.tabs # 使用Tab来进行分类，就是顶层的tabs菜单
     - navigation.tabs.sticky # 锁住Tabs，向下划的时候，上面的tabs不会消失
-    - navigation.sections # 对左边菜单栏的优化，主标题加粗
+    # - navigation.sections # 对左边菜单栏的优化，加了，文章菜单全部自动展开。不加的话有个收起的按钮
     - navigation.top # 返回顶部的按钮 在上滑时出现
     - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
     - navigation.expand # 打开Tab时左侧目录全部展开
@@ -65,13 +65,14 @@ nav:
       - 「01」初学C语言: BLOG/C/First-learnC1.md
       - 「02」初学C语言: BLOG/C/First-learnC2.md
       -  不太明白的语法: BLOG/C/ignorantOfSyntax.md
-    - JAVA
-      #- 文章1:<相对路径>
-      #- 文章2:<相对路径>
-      #- 文章3:<相对路径>
-    - Markdowm
-      #- 文章1:<相对路径>
-      #- 文章2:<相对路径>
+    - JAVA:
+      - 入门Java: BLOG/JAVA/begin-java.md
+      - 「01」面向对象: BLOG/JAVA/01-object-oriented.md
+      - 「02」面向对象: BLOG/JAVA/02-object-oriented.md
+      - Java核心技术卷I笔记: BLOG/JAVA/Java-hxj1-notes.md
+    - Markdown:
+      - Markdown文件命名规则: BLOG/Markdown/name-regulation.md
+      - Markdown使用语法: BLOG/Markdown/markdown-grammar.md
       #- 文章3:<相对路径>
     - MacOS
       #- 文章1:<相对路径>
