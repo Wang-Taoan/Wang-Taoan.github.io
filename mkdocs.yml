@@ -78,6 +78,10 @@ nav:
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
+  - 学习:
+    - LEARNING/index.md
+    - JAVA学习目标: LEARNING/java-target.md
+    - More
   - 喜欢的东西:
     - LIKETHINGS/index.md
     - LIKE1
