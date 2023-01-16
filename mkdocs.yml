@@ -96,6 +96,13 @@ nav:
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
+  - 生活: 
+    - LIFE/index.md
+    - LIFE1
+      #- 文章1:<相对路径>
+      #- 文章2:<相对路径>
+      #- 文章3:<相对路径>
+    
   - 转载:
     - REPRINT/index.md
     - 提问的智慧: REPRINT/how-to-ask-questions-the-smart-way.md
