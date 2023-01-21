@@ -9,13 +9,13 @@ theme:
   name: material
   palette:
     - scheme: default # 日间模式
-      primary: indigo # 主题颜色
+      primary: red # 主题颜色indigo
       accent: amber # 链接等可交互元件的高亮色
       toggle:
         icon: material/brightness-7 # 图标
         name: 切换至夜间模式 # 鼠标悬浮提示
     - scheme: slate # 夜间模式
-      primary: indigo
+      primary: red #indigo
       accent: amber
       toggle:
         icon: material/brightness-4
