@@ -9,13 +9,13 @@ theme:
   name: material
   palette:
     - scheme: default # 日间模式
-      primary: red # 主题颜色indigo
+      primary: indigo # 主题颜色indigo red
       accent: amber # 链接等可交互元件的高亮色
       toggle:
         icon: material/brightness-7 # 图标
         name: 切换至夜间模式 # 鼠标悬浮提示
     - scheme: slate # 夜间模式
-      primary: red #indigo
+      primary: indigo #indigo red
       accent: amber
       toggle:
         icon: material/brightness-4
@@ -122,7 +122,8 @@ markdown_extensions:
   - attr_list # 给图片后面添加{width="300"}设置大小
   - toc:
       permalink: true # 固定标题位置为当前位置
-  - pymdownx.highlight # 代码块高亮
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
       # linenums: true # 显示行号
       # auto_title: true # 显示编程语言名称
   - pymdownx.superfences # 代码块高亮插件
