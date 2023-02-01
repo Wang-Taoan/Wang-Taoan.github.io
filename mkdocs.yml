@@ -84,23 +84,21 @@ nav:
     - More
   - 喜欢的东西:
     - LIKETHINGS/index.md
+    - 喜欢的歌: docs/LIKETHINGS/喜欢的歌的副本.md
+    - 三国杀人物台词: LIKETHINGS/三国杀人物台词.md
+    - 诗歌序: LIKETHINGS/诗歌序.md
     - LIKE1
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
-    - LIKE2
-      #- 文章1:<相对路径>
-      #- 文章2:<相对路径>
-      #- 文章3:<相对路径>
-    - LIKE3
-      #- 文章1:<相对路径>
-      #- 文章2:<相对路径>
-      #- 文章3:<相对路径>
+   
   - 生活: 
     - LIFE/index.md
-    - LIFE1
-      #- 文章1:<相对路径>
-      #- 文章2:<相对路径>
+    - 随笔:
+      - 前言: LIFE/Jottings/随笔前言.md
+      - 2023-01: LIFE/Jottings/2023-01.md
+      - 2022-12: LIFE/Jottings/2022-12.md
+      - 2022-11: LIFE/Jottings/2022-11.md
       #- 文章3:<相对路径>
     
   - 转载:
@@ -108,6 +106,7 @@ nav:
     - 提问的智慧: REPRINT/how-to-ask-questions-the-smart-way.md
     - 演好自己的剧本: REPRINT/舞台.md
     - 我们为什么要读书: REPRINT/why-we-should-readbook.md
+    - 生活在树上: REPRINT/live-in-the-tree.md
     - 持续.....: REPRINT/wait.md
   - 关于:
     - ABOUT/index.md
