@@ -84,7 +84,7 @@ nav:
     - More
   - 喜欢的东西:
     - LIKETHINGS/index.md
-    - 喜欢的歌: docs/LIKETHINGS/喜欢的歌的副本.md
+    - 喜欢的歌: LIKETHINGS/喜欢的歌的副本.md
     - 三国杀人物台词: LIKETHINGS/三国杀人物台词.md
     - 诗歌序: LIKETHINGS/诗歌序.md
     - LIKE1
@@ -131,6 +131,12 @@ markdown_extensions:
   - abbr # 支持Markdown文件上方自定义标题标签等
   - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
   - pymdownx.details # admonition需要
+
+  - pymdownx.critic # 下面这是文本高亮、下划线、删除线需要
+  - pymdownx.caret # https://squidfunk.github.io/mkdocs-material/reference/formatting/
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
 # [Extensions]
 plugins:
   - search:
