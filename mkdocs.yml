@@ -74,6 +74,8 @@ nav:
       - Markdown文件命名规则: BLOG/Markdown/name-regulation.md
       - Markdown使用语法: BLOG/Markdown/markdown-grammar.md
       #- 文章3:<相对路径>
+    - 浏览器扩展程序:
+      - Tampermonkey: BLOG/BrowserExtension/Tampermonkey插件安装和使用.md
     - MacOS
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
