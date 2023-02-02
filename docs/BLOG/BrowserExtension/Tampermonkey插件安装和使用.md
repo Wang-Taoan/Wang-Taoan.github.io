@@ -55,8 +55,11 @@
 * 获取脚本，进入页面。
 ![](https://pic.imgdb.cn/item/63dbbbc3ac6ef860160bdad2.png)
 * 可以看见俩个脚本市场`Userscript.Zone` -`GreasyFork` ,推荐使用`GreasyFork`,可以直观看到脚本的得分、安装量，方便帮你辨识好用的脚本
+
 ![](https://pic.imgdb.cn/item/63dbbceeac6ef860160e41fc.png)
+
 > 上图左边为GreasyFork，右边为Userscript.Zone
+
 * 接下来你可以根据自己的需要在search中搜索你要的脚本咯，找到之后点击`安装`即可
 
 ## 删除脚本
@@ -69,6 +72,8 @@
 
 我用它看来三体可真好啊！
 ![](https://pic.imgdb.cn/item/63dbbf40ac6ef860161245a5.png)
+
+
 2. ` CSDN广告完全过滤、人性化脚本优化` 
 
 国内知名的开发者交流社区，不说文章质量如何，竟然广告这么多，复制代码还要登陆账号、开会员。
