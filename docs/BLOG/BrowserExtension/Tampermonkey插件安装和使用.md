@@ -35,6 +35,7 @@
 		3. 加载已解压的扩展程序。选择刚下载的`.crx`文件
 ![](https://pic.imgdb.cn/item/63dbb705ac6ef86016047836.png)
 * 方法三(仅适合macos)：
+
 	* 在appstore中下载`Tampermonkey`
 > appstore里需要12元购买，不推荐。 (以前不懂竟然傻傻地花了12元购买过这个(捂脸))
 
