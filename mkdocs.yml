@@ -76,6 +76,10 @@ nav:
       #- 文章3:<相对路径>
     - 浏览器扩展程序:
       - Tampermonkey: BLOG/BrowserExtension/Tampermonkey插件安装和使用.md
+    - 其他:
+      - 如何下载音乐: BLOG/Other/download-music.md
+      #- 文章2:<相对路径>
+      #- 文章3:<相对路径>
     - MacOS
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
@@ -123,6 +127,9 @@ markdown_extensions:
   - pymdownx.arithmatex: # latex支持
       generic: true
   - attr_list # 给图片后面添加{width="300"}设置大小
+  - pymdownx.emoji: # 使用emoji和icons
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - toc:
       permalink: true # 固定标题位置为当前位置
   - pymdownx.highlight: # 代码块高亮
