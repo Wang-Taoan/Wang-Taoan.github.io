@@ -1,8 +1,8 @@
-> Last updated on 2023/2/4
+> Last updated on 2023/2/14
 
 # 未来学习目标
 
-## Plan-A
+## Plan-1
 
 
 
@@ -31,34 +31,18 @@
 
 4. 计算机网络、操作系统、Spring八股文面试题，多背一背
 
-## Plan-B
 
-### 前端基础
+## Plan-2
 
-1. ~~了解HTML5标签~~
-2. ~~了解CSS3基本样式~~
-3. ~~了解JavaScipt基本语法，JSON-Ajax~~
+* JavaWeb:Servlet、http请求重定向和转发
 
-### Java Web
+* Spring5:IOC,AOP
 
-1. ~~Web底层（了解）：HTTP、URL、IP、DNS、请求与相应模型~~
+* SpringMVC:request、response、拦截器
 
-2. ~~网络编程和多线程（了解）：网络编程、Socket、多线程~~
+* MyBatis:动态SQL、操作数据库增删改查、全局配置
 
-3. ~~Tomcat（了解）：安装和基本配置、项目目录体系、搭建静态页面服务器~~
-
-4. ~~Servlet：........~~
-
-5. **Linux**:虚拟机安装和使用、目录结构和常用命令、安装软件、WAR包部署
-
-### 开发框架
-
-1. SSM
-
-2. Spring&&Spring MVC
-
-3. Springboot
-
+* SpringBoot：找个项目写起来
 
    
 
