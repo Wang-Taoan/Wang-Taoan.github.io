@@ -1,8 +1,8 @@
-> Last updated on 2023/2/14
+> Last updated on 2023/2/17
 
 # 未来学习目标
 
-## Plan-1
+## Plan-overview
 
 
 
@@ -32,9 +32,11 @@
 4. 计算机网络、操作系统、Spring八股文面试题，多背一背
 
 
-## Plan-2
+## Plan-now
 
-* JavaWeb:Servlet、http请求重定向和转发
+* ~~JavaWeb:Servlet、http请求重定向和转发~~
+
+* SpringBoot3
 
 * Spring5:IOC,AOP
 
@@ -42,7 +44,7 @@
 
 * MyBatis:动态SQL、操作数据库增删改查、全局配置
 
-* SpringBoot：找个项目写起来
+
 
    
 
