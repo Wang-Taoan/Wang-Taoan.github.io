@@ -36,13 +36,13 @@
 
 * ~~JavaWeb:Servlet、http请求重定向和转发~~
 
-* SpringBoot3
+* ~~SpringBoot3~~
 
-* Spring5:IOC,AOP
+* ~~Spring5:IOC,AOP~~
 
-* SpringMVC:request、response、拦截器
+* ~~SpringMVC:request、response、拦截器~~
 
-* MyBatis:动态SQL、操作数据库增删改查、全局配置
+* ~~MyBatis:动态SQL、操作数据库增删改查、全局配置~~
 
 
 

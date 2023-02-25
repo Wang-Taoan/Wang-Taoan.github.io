@@ -1,6 +1,6 @@
 # Welcome to Taoan's site
 
-## **2023癸卯年 新年快乐！**
+## **勤学潜习，始觉自新**
 这里是Taoan的个人网站
 <https://wang-taoan.github.io/>
 
