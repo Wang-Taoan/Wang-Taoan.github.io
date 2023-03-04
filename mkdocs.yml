@@ -74,6 +74,10 @@ nav:
       - Markdown文件命名规则: BLOG/Markdown/name-regulation.md
       - Markdown使用语法: BLOG/Markdown/markdown-grammar.md
       #- 文章3:<相对路径>
+    - 生活中的计算机:
+      - 运行商所谓的宽带: BLOG/CsInTheLife/broadband.md
+      - 字节和字符的区别: BLOG/CsInTheLife/characters-and-bytes.md
+      - HTTP与HTTPS的区别: BLOG/CsInTheLife/HTTP-HTTPS.md
     - 浏览器扩展程序:
       - Tampermonkey: BLOG/BrowserExtension/Tampermonkey插件安装和使用.md
     - 其他:
@@ -86,9 +90,12 @@ nav:
       #- 文章3:<相对路径>
   - 学习:
     - LEARNING/index.md
-    - JAVA学习目标: LEARNING/java-target.md
-    - 本学期目标: LEARNING/target-2023.md
+    - 如何去学好一门课: LEARNING/how-to-learn-a-course-well.md
+    - 目标:
+      - JAVA学习目标: LEARNING/Target/java-target.md
+      - 本学期目标: LEARNING/Target/target-2023.md
     - More
+
   - 喜欢的东西:
     - LIKETHINGS/index.md
     - 喜欢的歌: LIKETHINGS/songs.md
@@ -103,10 +110,19 @@ nav:
     - LIFE/index.md
     - 随笔:
       - 前言: LIFE/Jottings/随笔前言.md
+      - 2023-02: LIFE/Jottings/2023-02.md
       - 2023-01: LIFE/Jottings/2023-01.md
       - 2022-12: LIFE/Jottings/2022-12.md
       - 2022-11: LIFE/Jottings/2022-11.md
       #- 文章3:<相对路径>
+    - 文章:
+      - 我与三北理发店: LIFE/Article/我与三北理发店.md
+      - 写博客和看博客之间的平衡: LIFE/Article/写博客和看博客之间的平衡.md
+    - 阅读:
+      - 2023-02: LIFE/Read/2023-02Book.md
+      - 读后有感:
+        - 《自卑与超越》: LIFE/Read/Feelings-After-Read/Inferiority-and-transcendence.md
+
     
   - 转载:
     - REPRINT/index.md
