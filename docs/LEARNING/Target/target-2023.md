@@ -1,5 +1,6 @@
 # 大二下学期目标
 
-> 2023/02/25
+> Last updated on 2023/03/11
 
-![](https://pic.imgdb.cn/item/63f99f3bf144a01007f06442.png)
+
+![](https://pic.imgdb.cn/item/640c1537f144a01007a6106b.jpg)
