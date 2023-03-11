@@ -1,0 +1,3419 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="王韬安的个人网站">
+      
+      
+        <meta name="author" content="王韬安">
+      
+      
+        <link rel="canonical" href="https://wang-taoan.github.io/BLOG/JAVA/02-object-oriented/">
+      
+      
+        <link rel="prev" href="../01-object-oriented/">
+      
+      
+        <link rel="next" href="../Java-hxj1-notes/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
+    
+    
+      
+        <title>「02」面向对象 - 王韬安的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7bf56d0a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#02" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="https://wang-taoan.github.io/" title="王韬安的个人网站" class="md-header__button md-logo" aria-label="王韬安的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.57 17.04-1.997-1.316-1.665 2.782-1.937-.567-1.706 2.604.087.82 9.274-1.71-.538-5.794zm-8.649-2.498 1.488-.204c.241.108.409.15.697.223.45.117.97.23 1.741-.16.18-.088.553-.43.704-.625l6.096-1.106.622 7.527-10.444 1.882zm11.325-2.712-.602.115L20.488 0 .789 2.285l2.427 19.693 2.306-.334c-.184-.263-.471-.581-.96-.989-.68-.564-.44-1.522-.039-2.127.53-1.022 3.26-2.322 3.106-3.956-.056-.594-.15-1.368-.702-1.898-.02.22.017.432.017.432s-.227-.289-.34-.683c-.112-.15-.2-.199-.319-.4-.085.233-.073.503-.073.503s-.186-.437-.216-.807c-.11.166-.137.48-.137.48s-.241-.69-.186-1.062c-.11-.323-.436-.965-.343-2.424.6.421 1.924.321 2.44-.439.171-.251.288-.939-.086-2.293-.24-.868-.835-2.16-1.066-2.651l-.028.02c.122.395.374 1.223.47 1.625.293 1.218.372 1.642.234 2.204-.116.488-.397.808-1.107 1.165-.71.358-1.653-.514-1.713-.562-.69-.55-1.224-1.447-1.284-1.883-.062-.477.275-.763.445-1.153-.243.07-.514.192-.514.192s.323-.334.722-.624c.165-.109.262-.178.436-.323a9.762 9.762 0 0 0-.456.003s.42-.227.855-.392c-.318-.014-.623-.003-.623-.003s.937-.419 1.678-.727c.509-.208 1.006-.147 1.286.257.367.53.752.817 1.569.996.501-.223.653-.337 1.284-.509.554-.61.99-.688.99-.688s-.216.198-.274.51c.314-.249.66-.455.66-.455s-.134.164-.259.426l.03.043c.366-.22.797-.394.797-.394s-.123.156-.268.358c.277-.002.838.012 1.056.037 1.285.028 1.552-1.374 2.045-1.55.618-.22.894-.353 1.947.68.903.888 1.609 2.477 1.259 2.833-.294.295-.874-.115-1.516-.916a3.466 3.466 0 0 1-.716-1.562 1.533 1.533 0 0 0-.497-.85s.23.51.23.96c0 .246.03 1.165.424 1.68-.039.076-.057.374-.1.43-.458-.554-1.443-.95-1.604-1.067.544.445 1.793 1.468 2.273 2.449.453.927.186 1.777.416 1.997.065.063.976 1.197 1.15 1.767.306.994.019 2.038-.381 2.685l-1.117.174c-.163-.045-.273-.068-.42-.153.08-.143.241-.5.243-.572l-.063-.111c-.348.492-.93.97-1.414 1.245-.633.359-1.363.304-1.838.156-1.348-.415-2.623-1.327-2.93-1.566 0 0-.01.191.048.234.34.383 1.119 1.077 1.872 1.56l-1.605.177.759 5.908c-.337.048-.39.071-.757.124-.325-1.147-.946-1.895-1.624-2.332-.599-.384-1.424-.47-2.214-.314l-.05.059a2.851 2.851 0 0 1 1.863.444c.654.413 1.181 1.481 1.375 2.124.248.822.42 1.7-.248 2.632-.476.662-1.864 1.028-2.986.237.3.481.705.876 1.25.95.809.11 1.577-.03 2.106-.574.452-.464.69-1.434.628-2.456l.714-.104.258 1.834 11.827-1.424zM15.05 6.848c-.034.075-.085.125-.007.37l.004.014.013.032.032.073c.14.287.295.558.552.696.067-.011.136-.019.207-.023.242-.01.395.028.492.08.009-.048.01-.119.005-.222-.018-.364.072-.982-.626-1.308-.264-.122-.634-.084-.757.068a.302.302 0 0 1 .058.013c.186.066.06.13.027.207m1.958 3.392c-.092-.05-.52-.03-.821.005-.574.068-1.193.267-1.328.372-.247.191-.135.523.047.66.511.382.96.638 1.432.575.29-.038.546-.497.728-.914.124-.288.124-.598-.058-.698m-5.077-2.942c.162-.154-.805-.355-1.556.156-.554.378-.571 1.187-.041 1.646.053.046.096.078.137.104a4.77 4.77 0 0 1 1.396-.412c.113-.125.243-.345.21-.745-.044-.542-.455-.456-.146-.749"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            王韬安的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              「02」面向对象
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Wang-Taoan/Wang-Taoan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Wang-taoan.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        博客
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../LEARNING/" class="md-tabs__link">
+        学习
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../LIKETHINGS/" class="md-tabs__link">
+        喜欢的东西
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../LIFE/" class="md-tabs__link">
+        生活
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../REPRINT/" class="md-tabs__link">
+        转载
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ABOUT/" class="md-tabs__link">
+        关于
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://wang-taoan.github.io/" title="王韬安的个人网站" class="md-nav__button md-logo" aria-label="王韬安的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.57 17.04-1.997-1.316-1.665 2.782-1.937-.567-1.706 2.604.087.82 9.274-1.71-.538-5.794zm-8.649-2.498 1.488-.204c.241.108.409.15.697.223.45.117.97.23 1.741-.16.18-.088.553-.43.704-.625l6.096-1.106.622 7.527-10.444 1.882zm11.325-2.712-.602.115L20.488 0 .789 2.285l2.427 19.693 2.306-.334c-.184-.263-.471-.581-.96-.989-.68-.564-.44-1.522-.039-2.127.53-1.022 3.26-2.322 3.106-3.956-.056-.594-.15-1.368-.702-1.898-.02.22.017.432.017.432s-.227-.289-.34-.683c-.112-.15-.2-.199-.319-.4-.085.233-.073.503-.073.503s-.186-.437-.216-.807c-.11.166-.137.48-.137.48s-.241-.69-.186-1.062c-.11-.323-.436-.965-.343-2.424.6.421 1.924.321 2.44-.439.171-.251.288-.939-.086-2.293-.24-.868-.835-2.16-1.066-2.651l-.028.02c.122.395.374 1.223.47 1.625.293 1.218.372 1.642.234 2.204-.116.488-.397.808-1.107 1.165-.71.358-1.653-.514-1.713-.562-.69-.55-1.224-1.447-1.284-1.883-.062-.477.275-.763.445-1.153-.243.07-.514.192-.514.192s.323-.334.722-.624c.165-.109.262-.178.436-.323a9.762 9.762 0 0 0-.456.003s.42-.227.855-.392c-.318-.014-.623-.003-.623-.003s.937-.419 1.678-.727c.509-.208 1.006-.147 1.286.257.367.53.752.817 1.569.996.501-.223.653-.337 1.284-.509.554-.61.99-.688.99-.688s-.216.198-.274.51c.314-.249.66-.455.66-.455s-.134.164-.259.426l.03.043c.366-.22.797-.394.797-.394s-.123.156-.268.358c.277-.002.838.012 1.056.037 1.285.028 1.552-1.374 2.045-1.55.618-.22.894-.353 1.947.68.903.888 1.609 2.477 1.259 2.833-.294.295-.874-.115-1.516-.916a3.466 3.466 0 0 1-.716-1.562 1.533 1.533 0 0 0-.497-.85s.23.51.23.96c0 .246.03 1.165.424 1.68-.039.076-.057.374-.1.43-.458-.554-1.443-.95-1.604-1.067.544.445 1.793 1.468 2.273 2.449.453.927.186 1.777.416 1.997.065.063.976 1.197 1.15 1.767.306.994.019 2.038-.381 2.685l-1.117.174c-.163-.045-.273-.068-.42-.153.08-.143.241-.5.243-.572l-.063-.111c-.348.492-.93.97-1.414 1.245-.633.359-1.363.304-1.838.156-1.348-.415-2.623-1.327-2.93-1.566 0 0-.01.191.048.234.34.383 1.119 1.077 1.872 1.56l-1.605.177.759 5.908c-.337.048-.39.071-.757.124-.325-1.147-.946-1.895-1.624-2.332-.599-.384-1.424-.47-2.214-.314l-.05.059a2.851 2.851 0 0 1 1.863.444c.654.413 1.181 1.481 1.375 2.124.248.822.42 1.7-.248 2.632-.476.662-1.864 1.028-2.986.237.3.481.705.876 1.25.95.809.11 1.577-.03 2.106-.574.452-.464.69-1.434.628-2.456l.714-.104.258 1.834 11.827-1.424zM15.05 6.848c-.034.075-.085.125-.007.37l.004.014.013.032.032.073c.14.287.295.558.552.696.067-.011.136-.019.207-.023.242-.01.395.028.492.08.009-.048.01-.119.005-.222-.018-.364.072-.982-.626-1.308-.264-.122-.634-.084-.757.068a.302.302 0 0 1 .058.013c.186.066.06.13.027.207m1.958 3.392c-.092-.05-.52-.03-.821.005-.574.068-1.193.267-1.328.372-.247.191-.135.523.047.66.511.382.96.638 1.432.575.29-.038.546-.497.728-.914.124-.288.124-.598-.058-.698m-5.077-2.942c.162-.154-.805-.355-1.556.156-.554.378-.571 1.187-.041 1.646.053.046.096.078.137.104a4.77 4.77 0 0 1 1.396-.412c.113-.125.243-.345.21-.745-.044-.542-.455-.456-.146-.749"/></svg>
+
+    </a>
+    王韬安的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Wang-Taoan/Wang-Taoan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Wang-taoan.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">博客</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          博客
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C/First-learnC1/" class="md-nav__link">
+        「01」初学C语言
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C/First-learnC2/" class="md-nav__link">
+        「02」初学C语言
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C/ignorantOfSyntax/" class="md-nav__link">
+        不太明白的语法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+          JAVA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          JAVA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../begin-java/" class="md-nav__link">
+        入门Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-object-oriented/" class="md-nav__link">
+        「01」面向对象
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          「02」面向对象
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        「02」面向对象
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    常见七大查找算法
+  </a>
+  
+    <nav class="md-nav" aria-label="常见七大查找算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    简介
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    常见排序算法
+  </a>
+  
+    <nav class="md-nav" aria-label="常见排序算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    *递归算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ayyaysapi" class="md-nav__link">
+    Ayyays数组API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    *特别了解Sort方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambda" class="md-nav__link">
+    Lambda表达式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    单列集合Collection
+  </a>
+  
+    <nav class="md-nav" aria-label="单列集合Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collection_1" class="md-nav__link">
+    collection的方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.迭代器遍历
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2for" class="md-nav__link">
+    2.增强for遍历
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3lambda" class="md-nav__link">
+    3.Lambda遍历
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List集合接口
+  </a>
+  
+    <nav class="md-nav" aria-label="List集合接口">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    基本数据结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arraylist" class="md-nav__link">
+    ArrayList的底层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkedlist" class="md-nav__link">
+    LinkedList的底层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    迭代器的底层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    泛型
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set集合接口
+  </a>
+  
+    <nav class="md-nav" aria-label="set集合接口">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    基本数据结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_1" class="md-nav__link">
+    简单认识Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hashset" class="md-nav__link">
+    HashSet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkedhashset" class="md-nav__link">
+    LinkedHashSet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#treeset" class="md-nav__link">
+    TreeSet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    总结单列集合
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Java-hxj1-notes/" class="md-nav__link">
+        Java核心技术卷I笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_4" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+          Markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Markdown
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/name-regulation/" class="md-nav__link">
+        Markdown文件命名规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/markdown-grammar/" class="md-nav__link">
+        Markdown使用语法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+          生活中的计算机
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          生活中的计算机
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CsInTheLife/broadband/" class="md-nav__link">
+        运行商所谓的宽带
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CsInTheLife/characters-and-bytes/" class="md-nav__link">
+        字节和字符的区别
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CsInTheLife/HTTP-HTTPS/" class="md-nav__link">
+        HTTP与HTTPS的区别
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_6" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+          浏览器扩展程序
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          浏览器扩展程序
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BrowserExtension/Tampermonkey%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+        Tampermonkey
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_7" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+          其他
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          其他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Other/download-music/" class="md-nav__link">
+        如何下载音乐
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MacOS" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../LEARNING/">学习</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          学习
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LEARNING/how-to-learn-a-course-well/" class="md-nav__link">
+        如何去学好一门课
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          目标
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          目标
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LEARNING/Target/java-target/" class="md-nav__link">
+        JAVA学习目标【弃】
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LEARNING/Target/target-2023/" class="md-nav__link">
+        本学期目标
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../More" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../LIKETHINGS/">喜欢的东西</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          喜欢的东西
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/songs/" class="md-nav__link">
+        喜欢的歌
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/%E4%B8%89%E5%9B%BD%E6%9D%80%E4%BA%BA%E7%89%A9%E5%8F%B0%E8%AF%8D/" class="md-nav__link">
+        三国杀人物台词
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/%E8%AF%97%E6%AD%8C%E5%BA%8F/" class="md-nav__link">
+        诗歌序
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKE1" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../LIFE/">生活</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          生活
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          随笔
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          随笔
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIFE/Jottings/%E9%9A%8F%E7%AC%94%E5%89%8D%E8%A8%80/" class="md-nav__link">
+        前言
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIFE/Jottings/2023-02/" class="md-nav__link">
+        2023-02
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIFE/Jottings/2023-01/" class="md-nav__link">
+        2023-01
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIFE/Jottings/2022-12/" class="md-nav__link">
+        2022-12
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIFE/Jottings/2022-11/" class="md-nav__link">
+        2022-11
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          文章
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          文章
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIFE/Article/%E6%88%91%E4%B8%8E%E4%B8%89%E5%8C%97%E7%90%86%E5%8F%91%E5%BA%97/" class="md-nav__link">
+        我与三北理发店
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIFE/Article/%E5%86%99%E5%8D%9A%E5%AE%A2%E5%92%8C%E7%9C%8B%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B9%B3%E8%A1%A1/" class="md-nav__link">
+        写博客和看博客之间的平衡
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          阅读
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          阅读
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIFE/Read/2023-02book/" class="md-nav__link">
+        2023-02
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4_2" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+          读后有感
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          读后有感
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIFE/Read/Feelings-After-Read/Inferiority-and-transcendence/" class="md-nav__link">
+        《自卑与超越》
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../REPRINT/">转载</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          转载
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../REPRINT/how-to-ask-questions-the-smart-way/" class="md-nav__link">
+        提问的智慧
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../REPRINT/%E8%88%9E%E5%8F%B0/" class="md-nav__link">
+        演好自己的剧本
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../REPRINT/why-we-should-readbook/" class="md-nav__link">
+        我们为什么要读书
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../REPRINT/live-in-the-tree/" class="md-nav__link">
+        生活在树上
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../REPRINT/wait/" class="md-nav__link">
+        持续.....
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ABOUT/">关于</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/information/" class="md-nav__link">
+        作者信息
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/bulid/" class="md-nav__link">
+        网站构建
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/support/" class="md-nav__link">
+        支持作者
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    常见七大查找算法
+  </a>
+  
+    <nav class="md-nav" aria-label="常见七大查找算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    简介
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    常见排序算法
+  </a>
+  
+    <nav class="md-nav" aria-label="常见排序算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    *递归算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ayyaysapi" class="md-nav__link">
+    Ayyays数组API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    *特别了解Sort方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambda" class="md-nav__link">
+    Lambda表达式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    单列集合Collection
+  </a>
+  
+    <nav class="md-nav" aria-label="单列集合Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collection_1" class="md-nav__link">
+    collection的方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.迭代器遍历
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2for" class="md-nav__link">
+    2.增强for遍历
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3lambda" class="md-nav__link">
+    3.Lambda遍历
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List集合接口
+  </a>
+  
+    <nav class="md-nav" aria-label="List集合接口">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    基本数据结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arraylist" class="md-nav__link">
+    ArrayList的底层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkedlist" class="md-nav__link">
+    LinkedList的底层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    迭代器的底层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    泛型
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set集合接口
+  </a>
+  
+    <nav class="md-nav" aria-label="set集合接口">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    基本数据结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_1" class="md-nav__link">
+    简单认识Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hashset" class="md-nav__link">
+    HashSet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkedhashset" class="md-nav__link">
+    LinkedHashSet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#treeset" class="md-nav__link">
+    TreeSet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    总结单列集合
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+<h1 id="02">「02」面向对象<a class="headerlink" href="#02" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>学的是B站黑马课程</p>
+<p>内容&amp;部分课程差异</p>
+<p>省流：第二套课程注重基础，但是没有更新完。</p>
+<p>第一套课程讲的快，可以省下很多时间。</p>
+</blockquote>
+<p><a href="【Java入门基础视频教程，java零基础自学就选黑马程序员Java入门教程（含Java项目和Java真题）】https://www.bilibili.com/video/BV1Cv411372m?vd_source=09a272bb741f26386eb2109c1d3dacfc">第一套JAVA课程</a></p>
+<p>一些数据结构（含lambda）-》*Stream流-〉异常-》#IO-〉线程-》 反射〉TCPIP</p>
+<p><a href="https://www.bilibili.com/video/BV17F411T7Ao?vd_source=09a272bb741f26386eb2109c1d3dacfc">第二套JAVA课程</a></p>
+<p>一些常见查找算法-〉<em>lambda-》</em>集合List-〉*数据结构TREE Set</p>
+<p>Maven-异常-#IO流</p>
+<h2 id="_1">常见七大查找算法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">简介<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>基本查找</p>
+<ul>
+<li>二分查找-插值查找-斐波那契查找</li>
+</ul>
+<blockquote>
+<p>前提：数据必须有序</p>
+<p>这些是二分的优化，区别是计算mid的方式不一样</p>
+</blockquote>
+<ul>
+<li>分块查找-哈希查找</li>
+</ul>
+<p>原则1:块内无序，块间有序</p>
+<p>原则2:块数量是数字个数开根号</p>
+<p>核心算法：先找在哪一块中，然后在块内找</p>
+<p>1.定义一个块类（里面放最大值，起始、结束索引</p>
+<p>2.这个类数组里面放全部的块</p>
+<blockquote>
+<p>java中的class类就是C++中的结构体</p>
+</blockquote>
+<h2 id="_3">常见排序算法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>冒泡排序、选择排序</li>
+<li>插入排序</li>
+</ul>
+<p>认为前面部分是有序的，后面是无序的，从后面一个一个拿出来比较前面的数字，然后把它插入。</p>
+<ul>
+<li>快速排序</li>
+</ul>
+<blockquote>
+<p>（含有递归的算法思想）</p>
+<p>递归的俩个核心</p>
+<p>找出口，找规律</p>
+<p>方法内部再次调用方法的时候，参数必须更加靠近出口</p>
+</blockquote>
+<h3 id="_4">*递归算法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>核心：找出口，找规律</p>
+<p>出口：就是一个具体的、到尽头的值</p>
+<blockquote>
+<p>比如斐波那契数列，第1和第2的值是1，这个时候就可以用1和2作为出口</p>
+<p>If x==1 ||x==2 return 1;</p>
+</blockquote>
+<p>规律：只要写到一次具体的规则，就会重复调用</p>
+<blockquote>
+<p>比如斐波那契数列,规律：从3个开始，每一次都是前2个数相加。</p>
+<p>Return sum(x-1)+sum(x-2);</p>
+</blockquote>
+<p><img alt="img" src="../images/OO12.png" width="300" /></p>
+<h3 id="ayyaysapi">Ayyays数组API<a class="headerlink" href="#ayyaysapi" title="Permanent link">&para;</a></h3>
+<p>搜索、拷贝、填充、排序、打印数组</p>
+<h3 id="sort">*特别了解Sort方法<a class="headerlink" href="#sort" title="Permanent link">&para;</a></h3>
+<p><code>Sort</code>是默认基本数据类型升序排序</p>
+<ul>
+<li>如要按照指定的规则排序或者要引用数据类型进行排序，就要重写排序规则！</li>
+</ul>
+<p><code>Sort</code>底层是 <code>插入排序+二分查找</code></p>
+<p>其中sort中的排序规则，是一个<strong><em>接口实现类</em></strong>，这时候只要用匿名内部类（主要是简化代码</p>
+<blockquote>
+<p>如果实现类对象只要用到一次，就可以用匿名内部类的形式进行书写</p>
+</blockquote>
+<ul>
+<li>Compare的参数</li>
+</ul>
+<p>（插入排序+二分查找）</p>
+<p>o1是表示在无序序列中便利得到的每一个元素</p>
+<p>o2是表示在有序序列中的元素</p>
+<p>返回值：正数（0）表示要插入的元素是大的，放在后面。</p>
+<p>负数表示，要插入的元素是小的，要放在前面</p>
+<ul>
+<li>Compare 方法的内部</li>
+</ul>
+<p>可以按照自己想定义的规则去任意写。</p>
+<p>比如：</p>
+<p>按照字符串的长度排序 ——<code>Return o1.length()-o2.length()</code></p>
+<p>按照字符串内容来排序——<code>Return o1.getname().compareTo(o2.getname)</code></p>
+<h2 id="lambda">Lambda表达式<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h2>
+<p>首先引入</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>函数式编程
+</code></pre></div>
+<p>忽略面向对象的复杂语法，强调做什么，而不是谁去做</p>
+<ul>
+<li>Lambda格式</li>
+</ul>
+<p><img alt="img" src="../images/OO13.png" width="400" /></p>
+<ul>
+<li>作用</li>
+</ul>
+<p>1.能且只能简化函数式接口的匿名内部类的书写</p>
+<p>2.让代码更加简洁</p>
+<blockquote>
+<p>函数式接口：这个接口有且只有一个抽象方法</p>
+<p>@FunctionInterface表示下面的借口是函数式接口</p>
+</blockquote>
+<ul>
+<li>Lambda省略规则</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>可推导，可省略
+</code></pre></div>
+<p>1.参数类型可以不写</p>
+<p>2.如果可以只有一个参数，同时（）也可以省略</p>
+<p>3.如果lambda只有一行，大括号，分号，return可以省略不写，需要同时省略。</p>
+<ul>
+<li>例子用Arrays.sort()，里面参数的匿名内部类试试</li>
+</ul>
+<h2 id="collection">单列集合Collection<a class="headerlink" href="#collection" title="Permanent link">&para;</a></h2>
+<p>单列集合的顶层接口</p>
+<p><img alt="" src="../images/OO14.png" width="400" /></p>
+<h3 id="collection_1">collection的方法<a class="headerlink" href="#collection_1" title="Permanent link">&para;</a></h3>
+<p>简单来说就是增、删、查询（查个数，查具体的元素……</p>
+<blockquote>
+<p>其中contains（）底层是用equals方法来判断的，所以如果集合中存储的是<strong>自定义类</strong>，就要在类里重写equals方法，否则就是用objects的equals（这个是比较地址值）</p>
+</blockquote>
+<h3 id="1">1.迭代器遍历<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><code>Iterator&lt;E&gt;</code></p>
+<p>遍历全部元素</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">while</span><span class="err">（</span><span class="w"> </span><span class="n">iterator</span><span class="p">.</span><span class="na">hasnext</span><span class="p">()){</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">        </span><span class="n">object</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iterator</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<blockquote>
+<p>迭代器类似于指针，不依赖索引</p>
+<p>注意：</p>
+<p>1.迭代器遍历完毕了，指针不复位，要想复位，就要重新创建对象</p>
+<p>2.在迭代器遍历的时候，不能用集合的方法进行删除和增加。如果实在要删除可以用迭代器的方法remove来删除</p>
+</blockquote>
+<h3 id="2for">2.增强for遍历<a class="headerlink" href="#2for" title="Permanent link">&para;</a></h3>
+<ul>
+<li>底层就是迭代器</li>
+<li>作用：简化代码</li>
+<li>适用范围：所有单列集合和数组才能用</li>
+<li>格式</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">for</span><span class="p">(</span><span class="n">元素数据类型</span><span class="w"> </span><span class="n">变量名</span><span class="err">：</span><span class="n">数组或者集合</span><span class="err">）</span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>a是第三方变量，依次表示集合中的每一个数据</p>
+</blockquote>
+<ul>
+<li>快捷生成方式：<code>arr.for</code></li>
+</ul>
+<h3 id="3lambda">3.Lambda遍历<a class="headerlink" href="#3lambda" title="Permanent link">&para;</a></h3>
+<ul>
+<li>一个方法</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>arr.forEach(consumer函数类接口)
+</code></pre></div>
+<blockquote>
+<p>里面抽象类方法<code>accept(s)</code>参数s一次表示集合中的每一个数据</p>
+</blockquote>
+<p>接着可以用Lambda来简化匿名内部类</p>
+<h2 id="list">List集合接口<a class="headerlink" href="#list" title="Permanent link">&para;</a></h2>
+<ul>
+<li>特点：有序、<strong>有索引</strong>、可重复</li>
+<li>特有的方法都有参数都是索引</li>
+</ul>
+<blockquote>
+<p>ListIterator列表迭代器的使用方法和普通迭代器一致，</p>
+<p>不同的是在于它多了往List中增加元素的功能</p>
+<ul>
+<li>如果在遍历的过程中要删除或者增加元素，不能用集合中的方法来增或者删，必要要用迭代器中的方法</li>
+</ul>
+</blockquote>
+<h3 id="_5">基本数据结构<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>栈、队列、数组、链表</p>
+<ul>
+<li>数组VS链表</li>
+<li>数组：查询快，增删慢</li>
+<li>链表：查询慢，增删快</li>
+</ul>
+<h3 id="arraylist">ArrayList的底层<a class="headerlink" href="#arraylist" title="Permanent link">&para;</a></h3>
+<p>底层是数组结构的</p>
+<ol>
+<li>利用空参创建的集合，在底层创建一个默认长度为0的数组</li>
+<li>添加第一个元素时，底层会创建一个新的长度为10的数组</li>
+<li>存满时，会创建一个1.5倍的新数组</li>
+<li>如果一次添加多个元素，1.5倍还放不下，则新创建数组的长度以实际为准</li>
+</ol>
+<blockquote>
+<p>TIPS：扩容的意思不是原数组本身可以增加容量，而是创建一个可以容纳更多元素的新数组</p>
+</blockquote>
+<h3 id="linkedlist">LinkedList的底层<a class="headerlink" href="#linkedlist" title="Permanent link">&para;</a></h3>
+<p>底层是双链表</p>
+<p>特点：增删快</p>
+<p>内部类 Node（说白了就是结构体）</p>
+<h3 id="_6">迭代器的底层<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>底层是一个类似于指针的cursor</p>
+<p>一个一个指向下一个元素</p>
+<h3 id="_7">泛型<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>为什么要引入泛型？</li>
+</ul>
+<p>没有泛型，集合就可以存储任意的数据类型，只能用object类来接受集合里面的内容，不能调用子类特有的方法，（注意这个时候强转可能会出现异常）</p>
+<p>所以推出了泛型</p>
+<ul>
+<li>格式<code>&lt;引用数据类型&gt;</code></li>
+</ul>
+<blockquote>
+<p>注意一定不能写基本数据类型，</p>
+<p>因为基本数据类型它没有顶级父类Object类，没办法转成Object类</p>
+</blockquote>
+<ul>
+<li>作用：就是为了统一数据类型！</li>
+</ul>
+<blockquote>
+<p>这就是为什么JAVA是强类型的语言</p>
+</blockquote>
+<ul>
+<li>
+<p>泛型的种类</p>
+</li>
+<li>
+<p>带有泛型的类<code>Public class ArrayList&lt;E&gt;{}</code></p>
+</li>
+</ul>
+<p>创建该类的时候，E是数据类型</p>
+<blockquote>
+<p>里面的E可以写任意字母T……都可以</p>
+<p>有点像C语言中#define datatype int</p>
+</blockquote>
+<ol>
+<li>泛型方法<code>Public&lt;T&gt;void show(T t)</code></li>
+<li>
+<p>泛型接口<code>Public interface List&lt;E&gt;{}</code></p>
+</li>
+<li>
+<p>应用场景</p>
+</li>
+</ol>
+<p>泛型不具备继承性、但是数据具备继承性</p>
+<blockquote>
+<p>一句值得品味的话</p>
+</blockquote>
+<p><img alt="img" src="../images/OO15.png" width="300" /></p>
+<p><img alt="img" src="../images/OO16.png" width="300" /></p>
+<ol>
+<li>在定义类、方法、接口，如果类型不确定，就可以定义泛型类、方法、接口</li>
+</ol>
+<blockquote>
+<p>这个存在弊端，可以接受任意的数据类型，太广了，如果要限定一些类型，这个时候就看·方法2</p>
+</blockquote>
+<ol>
+<li>如果类型不确定，但是能知道以后传递的是</li>
+</ol>
+<p>某个继承体系中的，就可以用<code>泛型的通配符</code></p>
+<ul>
+<li>泛型的通配符</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>？
+</code></pre></div>
+<ol>
+<li><code>？ Extends E</code>表示可以传递E所有的子类类型</li>
+<li><code>？ super E</code> 表示可以传递E所有的父类类型</li>
+</ol>
+<h2 id="set">set集合接口<a class="headerlink" href="#set" title="Permanent link">&para;</a></h2>
+<h3 id="_8">基本数据结构<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>二叉树的演变</p>
+<ol>
+<li>普通二叉树</li>
+</ol>
+<p>弊端：数据不规律，不好查找元素，于是有了<code>二叉查找树</code></p>
+<ol>
+<li>二叉查找树</li>
+</ol>
+<p>规则：任意节点，左子节点比当前节点小，右子节点比当前节点大</p>
+<p>弊端：可能会导致左右树高度差过大的情况，于是出现<code>平衡二叉树。</code></p>
+<ol>
+<li>平衡二叉树</li>
+</ol>
+<p>规则：<em>任意节点</em>左右子树高度差不超过1</p>
+<p>引入问题：为什么要旋转？插入新节点，导致树不平衡了，所以就要旋转了</p>
+<ul>
+<li>平衡二叉树的旋转机制</li>
+</ul>
+<p>这里用左旋机制来说明</p>
+<p><img alt="img" src="../images/OO17.png" width="400" /></p>
+<ul>
+<li>**四种旋转情况</li>
+</ul>
+<p><img alt="img" src="../images/OO18.png" width="400" /></p>
+<ol>
+<li>
+<p>红黑树</p>
+</li>
+<li>
+<p>引入：因为平衡二叉树插入节点的时候，左右旋次数太多有时效率不好，所以引入了红黑树</p>
+</li>
+<li>
+<p>原因：大部分情况下只要改变颜色就可以了，旋转的机会比较少</p>
+</li>
+<li>
+<p>特点</p>
+</li>
+<li>
+<p>是特殊的二叉查找树</p>
+</li>
+<li>不是高度平衡的</li>
+<li>
+<p>特有的红黑规则， 每一个节点是红或者黑</p>
+</li>
+<li>
+<p>5个红黑规则：</p>
+</li>
+</ol>
+<p><img alt="img" src="../images/OO19.png" width="500" /></p>
+<ul>
+<li>默认颜色：默认添加的节点是红色的，效率高</li>
+<li>添加节点的几种情况以及解决方法</li>
+</ul>
+<p><img alt="img" src="../images/OO20.png" width="500" /></p>
+<h3 id="set_1">简单认识Set<a class="headerlink" href="#set_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>特点</p>
+</li>
+<li>
+<p>无序、不重复、无索引</p>
+</li>
+<li>
+<p>方法和collection的API一致</p>
+</li>
+<li>
+<p>遍历方式</p>
+</li>
+</ul>
+<p>迭代器---增强For---lambda表达式</p>
+<h3 id="hashset">HashSet<a class="headerlink" href="#hashset" title="Permanent link">&para;</a></h3>
+<ul>
+<li>组成：数组+链表+红黑树</li>
+</ul>
+<blockquote>
+<p>JDK8之后的版本是这样的，</p>
+<p>JDK8之前是数组+链表</p>
+</blockquote>
+<ul>
+<li>哈希值：默认是用地址值取计算出来的</li>
+</ul>
+<p>作用：确定元素添加在数组的哪个位置</p>
+<ul>
+<li>hashcode方法</li>
+</ul>
+<p>重写这个方法会根据属性值来计算哈希值</p>
+<ul>
+<li>底层原理</li>
+</ul>
+<p><img alt="img" src="../images/OO21.png" width="400" /></p>
+<ol>
+<li>
+<p>当链表长度超过8，而且数组长度大于等于64，自动转换成红黑树</p>
+</li>
+<li>
+<p>如果集合中存储的是自定义对象，就必须要重写hashcode和equal方法。这个是为了去重复</p>
+</li>
+</ol>
+<h3 id="linkedhashset">LinkedHashSet<a class="headerlink" href="#linkedhashset" title="Permanent link">&para;</a></h3>
+<ul>
+<li>区别：有序</li>
+<li>作用:能保证存储和取出的顺序一致</li>
+<li>原理：多了双链表的机制</li>
+</ul>
+<h3 id="treeset">TreeSet<a class="headerlink" href="#treeset" title="Permanent link">&para;</a></h3>
+<ul>
+<li>特点：不重复、无索引、<em>可排序</em></li>
+<li>底层：红黑树，性能好</li>
+<li>排序规则：从小到大<strong><em>（默认）</em></strong>如果存的是字符，默认是按照字符在ASCII码表中的数字升序进行排序</li>
+</ul>
+<p>那我们想怎么对自定义对象进行排序呢？</p>
+<ol>
+<li>方法一：</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>实现Comparable 接口
+</code></pre></div>
+<p>重写抽象方法 compareTo</p>
+<p>（this表示当前要添加的元素，o表示已经在红黑树中存在的元素 Return this.getAge()-o.getAge();）</p>
+<ol>
+<li>方法二：</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>比较器compartor
+</code></pre></div>
+<p>在新建集合对象的时候，自定义Comparator比较器，指定比较规则</p>
+<p><img alt="img" src="../images/OO22.png" width="500" /></p>
+<ul>
+<li>什么时候用方法二？</li>
+</ul>
+<p>非自定义的类型<code>integer</code>和<code>String</code>，如果要按照自己的想法给排序，比如长度，可以选他。（如上图所示）</p>
+<blockquote>
+<p>因为这个是系统已经封装好，不能去改它的源码</p>
+</blockquote>
+<p>推荐：使用方法一</p>
+<ul>
+<li>
+<p>方法返回值的特点：</p>
+</li>
+<li>
+<p>负数：表示当前要添加的元素是小的，存左边</p>
+</li>
+<li>正数：表示当前要添加的元素是大的，存右边</li>
+<li>0表示当前要添加的元素已经存在，舍弃</li>
+</ul>
+<h2 id="_9">总结单列集合<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>众多单列集合如何去选择？</p>
+<p><img alt="img" src="../images/OO21.png" width="400" /></p>
+<h1 id="map">Map双列集合<a class="headerlink" href="#map" title="Permanent link">&para;</a></h1>
+<p><img alt="img" src="../images/OO24.png" width="400" /></p>
+<ul>
+<li>特点</li>
+</ul>
+<p><img alt="img" src="../images/OO25.png" width="400" /></p>
+<h3 id="api">常见的API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
+<p>Map是双列集合的顶层接口</p>
+<p>一个概念：键key-值values对</p>
+<p>API:增-删-查</p>
+<ul>
+<li>Put方法的细节</li>
+</ul>
+<p>Put 添加/覆盖</p>
+<p>1.如果添加的时候键不存在，返回的是null</p>
+<p>2.在添加的时候如果键已经存在，会把原有的键值对覆盖，返回被覆盖的值</p>
+<h3 id="1_1">1.键找值遍历<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>通过方法<code>keySet</code>把键放到一个单列集合Set中，</li>
+<li>遍历单列集合Set得到每一个键，然后利用map集合的键获得对应的值</li>
+</ol>
+<p>方法<code>get（key）</code></p>
+<blockquote>
+<p>这个遍历Set里面装的是键</p>
+</blockquote>
+<h3 id="2">2.键值对遍历<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>通过方法<code>entrySet</code>把所有的键值对 对象放到一个单列集合Set中</li>
+<li>遍历单列集合Set获得每一个键值对对象，然后调用方法<code>getKey</code>获得键<code>getValue</code>获得值</li>
+</ol>
+<blockquote>
+<p>这个遍历Set里面装的是键值对对象，</p>
+<p>也就是把键值对对象抽象了</p>
+</blockquote>
+<h3 id="3lambda_1">3.Lambda遍历<a class="headerlink" href="#3lambda_1" title="Permanent link">&para;</a></h3>
+<p><code>forEach</code>依次得到每一个键和值</p>
+<p>下面是样例</p>
+<p><img alt="img" src="../images/OO26.png" width="400" /></p>
+<blockquote>
+<p>这个方法的源码和第二种遍历方式是一样的</p>
+</blockquote>
+<h3 id="hashmap">Hashmap<a class="headerlink" href="#hashmap" title="Permanent link">&para;</a></h3>
+<p>特点：</p>
+<ol>
+<li>方法继承map的</li>
+<li>键的位置放的是<em>自定义对象</em>，要重写equlas、hashcode方法</li>
+<li>值的话不用</li>
+</ol>
+<h3 id="linkedhashmap">LinkedHashMap<a class="headerlink" href="#linkedhashmap" title="Permanent link">&para;</a></h3>
+<p>特点：有序、不重复、无索引</p>
+<p>底层：多了个双链表</p>
+<h3 id="treemap">TreeMap<a class="headerlink" href="#treemap" title="Permanent link">&para;</a></h3>
+<ol>
+<li>自带排序的</li>
+<li>可排序：对键进行排序</li>
+<li>默认是按照键的从小到大进行排序，也可以自己规定规则</li>
+</ol>
+<p>俩种书写规则，具体看TreeSet板块</p>
+<h2 id="_10">可变参数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li>引入问题</li>
+</ul>
+<p>如果形参的个数是未知的？怎么办</p>
+<p>就要引入可变参数</p>
+<blockquote>
+<p>底层是数组，是java帮我们创建好的</p>
+</blockquote>
+<p><img alt="img" src="../images/OO27.png" width="400" /></p>
+<h2 id="collections">*Collections集合工具类<a class="headerlink" href="#collections" title="Permanent link">&para;</a></h2>
+<p><code>shuffle</code>打乱集合顺序</p>
+<p><code>addAll</code>批量添加</p>
+<p><code>sort</code>方法：排序</p>
+<h2 id="_11">集合嵌套<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>在双列集合中，嵌套的是一个单列集合ArrayList</p>
+<h2 id="stream">Stream流<a class="headerlink" href="#stream" title="Permanent link">&para;</a></h2>
+<h3 id="_12">目的<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>结合了Lambada 表达式，用于简化集合和数组操作的API</p>
+<h3 id="_13">思想<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>通过stream()把元素一个一个放在传送带上，一遍一遍通过stream流API简化并过滤掉自己不要的。</p>
+<h3 id="stream_1">获得Stream流<a class="headerlink" href="#stream_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>单列集合Collection获取流</li>
+<li>双列map获取流</li>
+<li>数组获取流</li>
+</ul>
+<p><img alt="img" src="../images/OO28.png" width="400" /></p>
+<h2 id="api_1">中间方法API<a class="headerlink" href="#api_1" title="Permanent link">&para;</a></h2>
+<p><img alt="img" src="../images/OO29.png" width="400" /></p>
+<h2 id="api_2">终结方法API<a class="headerlink" href="#api_2" title="Permanent link">&para;</a></h2>
+<p><img alt="img" src="../images/OO30.png" width="400" /></p>
+<h2 id="stream_2">收集Stream流<a class="headerlink" href="#stream_2" title="Permanent link">&para;</a></h2>
+<p><img alt="img" src="../images/OO31.png" width="400" /></p>
+<h2 id="_14">异常<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="_15">概述<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>为什么要用异常</li>
+</ul>
+<p>1.如果出现异常，不提前去处理，JVM虚拟机会终止</p>
+<p>2.提前处理异常，是让程序更加稳健</p>
+<ul>
+<li>
+<p>异常体系</p>
+</li>
+<li>
+<p>运行时异常：运行时候出现的异常</p>
+</li>
+<li>编译时异常：编译的时候就报错</li>
+</ul>
+<h3 id="_16">运行时异常<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>RuntimeException</p>
+<h3 id="_17">编译时异常<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>作用：</li>
+</ul>
+<p>1.是担心程序员技术不行，比如一些很比较复杂的方法内写错，在编译阶段时就爆出一个错误，目的在于提醒不要出错。</p>
+<ul>
+<li>继承：不是runtimeException，是继承Exception</li>
+</ul>
+<h3 id="_18">默认异常处理机制<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p><strong><em>并不好</em></strong>，一旦出现真的异常，程序立即死亡！</p>
+<h3 id="1throws">1.处理方法throws<a class="headerlink" href="#1throws" title="Permanent link">&para;</a></h3>
+<ul>
+<li>流程：方法内报错-&gt;抛给调用者-&gt;调用者抛给主函数main-&gt;main抛给JVM虚拟机-&gt;JVM直接杀死程序</li>
+</ul>
+<blockquote>
+<p>就是一个没有人管这个异常，都在推卸异常</p>
+</blockquote>
+<h3 id="2try-catch">2.try catch<a class="headerlink" href="#2try-catch" title="Permanent link">&para;</a></h3>
+<p>选中一块代码，快捷键<code>cmd+opt+t</code>可以快速添加try/catch</p>
+<h3 id="3">3.前两者结合<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p>方法体用throw抛给调用者，</p>
+<p>调用者用try自己处理异常</p>
+<p>规范上是最好的方法</p>
+<h3 id="_19">自定义异常<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>Throw：写在函数内的</p>
+<p>Throws：写在函数声明的地方</p>
+<h2 id="_20">日志<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<h3 id="_21">日志规范<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>一些接口</p>
+<ol>
+<li>commons logging</li>
+<li>Simple Logging Facade for java（简称slf4j-api</li>
+</ol>
+<h3 id="_22">日志实现框架<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>含义：是别人已经实现了日志规范接口的东西</li>
+<li>作用：可以把日志信息写到文件或者数据库中，性能较好</li>
+<li>比如：Logback</li>
+</ul>
+<h3 id="logback">Logback<a class="headerlink" href="#logback" title="Permanent link">&para;</a></h3>
+<ul>
+<li>主要分为三个技术模块</li>
+</ul>
+<p>core-classic-access 基础模块-log4j的改良模块-有关HTTP的模块</p>
+<ul>
+<li>快速入门</li>
+</ul>
+<p><img alt="img" src="../images/OO32.png" width="400" /></p>
+<ul>
+<li>配置文件xml</li>
+</ul>
+<p><img alt="img" src="../images/OO33.png" width="400" /></p>
+<h3 id="_23">日志级别设置<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>作用：来控制哪些日志不用输出</p>
+<ul>
+<li>TRACE&lt;DEBUG&lt;INFO&lt;WARN&lt;ERROR</li>
+<li>路径跟踪&lt;调试&lt;关键信息&lt;警告&lt;错误</li>
+</ul>
+<p>ALL/OFF：打开全部日志/关闭全部日志</p>
+<p><img alt="img" src="../images/OO34.png" width="400" /></p>
+<blockquote>
+<ul>
+<li>
+<p>默认级别是debug，只输出不低于当前级别的日志</p>
+</li>
+<li>
+<p>比如就只写<root> <root level = "ALL"></p>
+</li>
+</ul>
+</blockquote>
+<h2 id="file-io">File类-IO<a class="headerlink" href="#file-io" title="Permanent link">&para;</a></h2>
+<h3 id="file">File类<a class="headerlink" href="#file" title="Permanent link">&para;</a></h3>
+<p>File类可以定位文件：进行删除、获取文本本身信息</p>
+<blockquote>
+<p>但是不能读写文件内容</p>
+</blockquote>
+<ol>
+<li>File类创建对象</li>
+</ol>
+<p>支持相对路径，默认从当前工程下的目录寻找文件</p>
+<blockquote>
+<p>文件夹路径的/可能要用转义字符</p>
+</blockquote>
+<h3 id="_24">字符集<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ol>
+<li>GBK中国标码</li>
+</ol>
+<p>一个中文以两个字节的形式存储</p>
+<ol>
+<li>Unicode</li>
+</ol>
+<p>万国码 兼容ASCII编码表</p>
+<ol>
+<li>UTF-8字符集</li>
+</ol>
+<p>中文以3字节形式存储，英文和数字占1个字节</p>
+<h3 id="io">IO字节输出流<a class="headerlink" href="#io" title="Permanent link">&para;</a></h3>
+<p>含义：用来读写数据。</p>
+<p>字节流、字符流</p>
+<p>API：释放资源<code>close</code>、<code>read</code></p>
+<ul>
+<li>
+<p>举一个例子：</p>
+</li>
+<li>
+<p>定义一个FileInputStream 对象：is</p>
+</li>
+<li>
+<p>定一个桶对象放读进来的东西，byte[] buffer = new byte[3]</p>
+</li>
+<li>
+<p>is.read(buffer)读3个字节的内容放到桶中（3个英文字母 or 1个中文汉字）</p>
+</li>
+</ul>
+<hr />
+<p>综上效率过低：我们要的是使用输入流一次性读完文件的全部字节，解决乱码问题</p>
+<p>官方API：<code>readAllBytes()</code></p>
+<p>读完之后，读到的内容都是字节，想要变成想要的字符，需要用new String（Byte [] a）一下</p>
+<blockquote>
+<p>本质是char的字符类型的转换 （char）byte</p>
+</blockquote>
+<p>以默认的方式<code>utf-8</code>进行解码</p>
+<h3 id="_25">字节&lt;—&gt;字符<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p>输出的、输入的都是字节</p>
+<blockquote>
+<p>字节是人看不懂的，要通过字符集UTF-8来转成字符</p>
+</blockquote>
+<p>字节-&gt;字符 new String（Byte [] buffer）</p>
+<p>字符-&gt;字节 <code>.getBytes()</code>byte[] buffer2 = “你好”.getBytes()</p>
+<h3 id="io_1">IO字节输入流<a class="headerlink" href="#io_1" title="Permanent link">&para;</a></h3>
+<p>outputstream</p>
+<p>实现类<code>Fileoutputstream</code></p>
+<ul>
+<li>
+<p>API：</p>
+</li>
+<li>
+<p>写<code>write</code></p>
+</li>
+<li>刷新(让写出去的数据生效）<code>flush</code></li>
+<li>
+<p>释放资源（一定要做，会占内存）<code>close</code></p>
+</li>
+<li>
+<p>实现数据追加</p>
+</li>
+</ul>
+<h3 id="_26">优雅的资源释放方式<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<p>经典做法：<code>try-catch-finally</code></p>
+<h3 id="_27">字符输出/输入流<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>输出流</li>
+</ul>
+<blockquote>
+<p>针对字节流读取中文输出，会出现乱码</p>
+</blockquote>
+<p><code>FileReader</code></p>
+<p>API：<code>read</code></p>
+<p>读取一个字符返回，没有可读的字符就返回-1</p>
+<blockquote>
+<p>如果参数是字符数组char[]，最后要输出成字符串中文，还是和字节流一样，new String （char[] buffer）=这个代码的意思是字符-&gt;字符串</p>
+</blockquote>
+<ul>
+<li>输入流</li>
+</ul>
+<p><code>FileWriter</code></p>
+<p>API：<code>Write</code></p>
+<p>换行：<code>/r/n</code></p>
+<h2 id="_28">缓冲流<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<h3 id="_29">基本内容<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<ul>
+<li>原理：在内存中多了个缓冲池（8Kb），提高原始流读写数据的性能</li>
+<li>如何构造缓冲流对象</li>
+</ul>
+<p>构造参数放原始流：<code>Bufferinputstream(inputstream xx)</code></p>
+<ul>
+<li>继承的是<code>Fileoutinput</code> <code>Filereader</code></li>
+<li>种类：字节缓冲输入流、字符缓冲输入流</li>
+<li>使用方式和父类是一样的</li>
+</ul>
+<h3 id="_30">分类<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<p><img alt="img" src="../images/OO35.png" width="400" /></p>
+<h3 id="api_3">新增API<a class="headerlink" href="#api_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>BufferedReader</li>
+</ol>
+<p><code>readLine</code>读一行代码</p>
+<ol>
+<li>BufferedWrite</li>
+</ol>
+<p><code>newLine</code>换行</p>
+<blockquote>
+<p>这样就不用自己写\r\n来换行了</p>
+</blockquote>
+<h2 id="_31">转换流<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h2>
+<p>只有字符，没有字节的！！</p>
+<h3 id="_32">基本内容<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
+<p><strong>问题</strong> ：当文件和代码编码不一致的时候，会出现乱码</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>InputStreamReader
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>OutputStreamWrite
+</code></pre></div>
+<p><img alt="img" src="../images/OO36.png" width="400" /></p>
+<h2 id="_33">使用方式<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h2>
+<p><code>public InputStreamReader(InputStream is,String charset)</code></p>
+<p>可以指定编码把原始字节流转换成字符流，如此字符流中的字符不乱码</p>
+<p>原始字节流--&gt;转换字符流--&gt;缓冲流</p>
+<p>inputstream   inputstreamReader bufferReader</p>
+<blockquote>
+<p>同理outputstreamReader</p>
+</blockquote>
+<h2 id="_34">对象（反）序列化<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h2>
+<h3 id="_35">序列化<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<ul>
+<li>含义：将对象存到磁盘文件中</li>
+<li>
+<p>实现的流：<code>ObjectOutputStream</code></p>
+</li>
+<li>
+<p>必要的条件：该对象必须要实现序列化接口<code>Serializable</code></p>
+</li>
+<li>构造对象输出流：<code>ObjectOutputStream(new OutputStream())</code></li>
+<li>API：<code>writeObject（Object o）</code></li>
+</ul>
+<h3 id="_36">反序列化<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<ul>
+<li>含义：将对象从磁盘读到内存中</li>
+<li>构造对象输出流：<code>ObjectInputStream(new InputStream())</code></li>
+<li>API:<code>ReadObject（）</code></li>
+<li>版本号（了解）：</li>
+</ul>
+<h2 id="_37">打印流<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h2>
+<p><code>PrintStream</code></p>
+<p><code>PrintWriter</code></p>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<p>作用</p>
+<ul>
+<li>可以存储Properties的属性集的键值对数据到属性文件中去</li>
+</ul>
+<p><code>store</code></p>
+<ul>
+<li>可以加载属性文件中的数据到Properties对象中来</li>
+</ul>
+<p><code>load</code></p>
+<h2 id="_38">多线程<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h2>
+<h3 id="123">创建方式123<a class="headerlink" href="#123" title="Permanent link">&para;</a></h3>
+<ul>
+<li>方法一：继承Thread类</li>
+</ul>
+<p>1.定义一个线程类，继承<code>Thread</code>类，重写<code>run</code>方法</p>
+<p>2.在main中创建对象，用<code>start（）</code>方法来启动线程</p>
+<blockquote>
+<p>缺点：不能继承其他类，不利于扩展</p>
+</blockquote>
+<ul>
+<li>方法二：实现<code>MyRunnable</code>接口</li>
+</ul>
+<p>1.实现接口，重写run方法</p>
+<p>2.创建对象</p>
+<p>3.把对象交给Thread线程对象</p>
+<p>4.调用<code>start（）</code>方法</p>
+<blockquote>
+<p>优点：可以继承别的类，实现多个借口</p>
+<p>缺点：不能返回结果</p>
+</blockquote>
+<ul>
+<li>方法三：实现<code>callable</code>接口</li>
+</ul>
+<p>1.实现callable接口，重写<code>call</code>方法</p>
+<p>2.创建对象，把Callable对象交给<code>FutureTask</code>对象（是Runnable对象，可以交给Thread）</p>
+<p>3.再把FutureTask对象给<code>Thread</code></p>
+<p>4.最后Thread对象就可以<code>Start()</code>开启线程,<code>FutureTask</code>可以用<code>get</code>方法获得call方法的结果返回值</p>
+<blockquote>
+<p>优点：有返回值</p>
+</blockquote>
+<h3 id="thread">Thread常用方法<a class="headerlink" href="#thread" title="Permanent link">&para;</a></h3>
+<p>设置线程名字--获得名字--获得当前线程--休眠方法</p>
+<p><code>start</code>启动线程</p>
+<h2 id="_39">线程同步<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h2>
+<h3 id="_40">概念<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<ul>
+<li>问题：解决线程安全问题</li>
+<li>核心：加锁，让多个线程依次访问共享资源。</li>
+</ul>
+<h3 id="123_1">方法实现123<a class="headerlink" href="#123_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>方法一、同步代码块<code>Synchronized</code>来封装主要代码</p>
+</li>
+<li>
+<p>同步锁对象</p>
+</li>
+</ul>
+<p>实例方法建议用this作为锁对象</p>
+<p>静态方法建议用字节码类名.class 作为锁对象</p>
+<ul>
+<li>
+<p>方法二、同步方法</p>
+</li>
+<li>
+<p>格式</p>
+</li>
+</ul>
+<p>Synchronized写在返回值类型的前面</p>
+<ol>
+<li>
+<p>原理：每次只能一个线程进入，执行完毕后自动解锁，其他线程才能进来执行</p>
+</li>
+<li>
+<p>实例方法默认是this</p>
+</li>
+</ol>
+<p>静态方法默认是xx.class</p>
+<ul>
+<li>方法三、Lock锁</li>
+</ul>
+<p>​   <code>ReetrantLock</code></p>
+<h2 id="_41">线程池<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h2>
+<h3 id="_42">基本操作<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
+<ul>
+<li>问题：创建新线程开销太大了，影响系统性能</li>
+<li>解决：<code>ExecutorService</code>接口，实现类<code>ThreadPoolExecutor</code></li>
+</ul>
+<p><img alt="img" src="../images/OO37.png" width="400" /></p>
+<ul>
+<li>如何得到线程池对象</li>
+</ul>
+<p><code>ThreadPoolExecutor</code> 来创建一个线程池对象</p>
+<ul>
+<li>线程池启动的API</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>execute
+</code></pre></div>
+<h3 id="executors">Executors工具类<a class="headerlink" href="#executors" title="Permanent link">&para;</a></h3>
+<p>通过工具类来创建线程池</p>
+<blockquote>
+<p>存在风险。没有限制任务数量，会导致资源耗尽。不建议使用</p>
+</blockquote>
+<h3 id="_43">定时器<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ScheduledExecutorService
+</code></pre></div>
+<ul>
+<li>定时器（其实是一个线程池）</li>
+<li>API : <code>scheduleAtFixedRate</code></li>
+</ul>
+<h3 id="_44">并发和并行<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>参考好文 <a href="https://cloud.tencent.com/developer/article/1424249">并发和并行的区别</a></p>
+</blockquote>
+<ul>
+<li>
+<p>并发</p>
+</li>
+<li>
+<p>在操作系统中，是指一个时间段中有几个程序都处于已启动运行到运行完毕之间</p>
+</li>
+<li>
+<p>由于CPU切换的速度很快，给我们的感觉是这些线程在同时执行。这就是并发</p>
+</li>
+<li>
+<p>并行</p>
+</li>
+<li>
+<p><strong>并行（Parallel），当系统有一个以上CPU时，当一个CPU执行一个进程时，另一个CPU可以执行另一个进程，两个进程互不抢占CPU资源，可以同时进行，这种方式我们称之为并行(Parallel)。</strong></p>
+</li>
+<li>
+<p>区别：</p>
+</li>
+<li>
+<p><strong>并发是指在一段时间内宏观上多个程序同时运行。并行指的是同一个时刻，多个任务确实真的在同时运行。</strong></p>
+</li>
+<li>并发的多个任务之间是互相抢占资源的。   并行的多个任务之间是不互相抢占资源的。</li>
+<li>只有在多CPU的情况中，才会发生并行。否则，看似同时发生的事情，其实都是并发执行的。</li>
+</ul>
+<h2 id="_45">网络通信三要素<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h2>
+<h3 id="ip">IP地址<a class="headerlink" href="#ip" title="Permanent link">&para;</a></h3>
+<ul>
+<li>含义：</li>
+</ul>
+<p>定位上网设备的唯一标志。</p>
+<p>常见的有IPv4 IPv6</p>
+<ul>
+<li>域名：例如www.baidu.com</li>
+<li>dns服务器:（解析域名-&gt;IP地址）</li>
+<li>IP地址形式：公网地址、私有地址（局域网使用）</li>
+<li>IP常用命令</li>
+</ul>
+<p><code>ipconfig</code>查看本机IP地址</p>
+<p><code>Ping ip地址</code>：检查网络是否连通</p>
+<ul>
+<li>特殊IP</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>本机IP：127.0.0.1` 或者`localhost
+</code></pre></div>
+<h3 id="ip_1">IP地址类<a class="headerlink" href="#ip_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>InetAddress
+</code></pre></div>
+<ul>
+<li>获取对象：静态方法<code>getxxxx</code></li>
+</ul>
+<p>比如：获取本机IP <code>getLocalHost</code></p>
+<ul>
+<li>API：获取主机名字、获得IP地址</li>
+</ul>
+<h3 id="_46">端口号<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h3>
+<ul>
+<li>含义：程序在计算机上的标识</li>
+</ul>
+<h3 id="_47">协议<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h3>
+<ul>
+<li>含义：连接和通信数据的规则</li>
+<li>传输层常见的协议：TCP 、UDP</li>
+<li>
+<p>TCP是可靠的协议，但通信效率低</p>
+</li>
+<li>
+<p>UDP是面向无连接，不可靠传输的通讯协议</p>
+</li>
+</ul>
+<h3 id="udp">UDP<a class="headerlink" href="#udp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>特点：无连接、不可靠传输</li>
+<li>过程：注册端口—创建数据包对象接受数据Packer ——端口对象调用接收方法（参数是Packer）</li>
+<li>UDP的接受端可以接受很多发送端的消息，因为只负责接受数据包，无所谓是哪个发送端的数据包</li>
+</ul>
+<h3 id="tcp">TCP<a class="headerlink" href="#tcp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>含义：是一种面向连接、安全、可靠的协议</li>
+<li>TCP模型：客户端==Socker===服务端      通过IO流来输入输出数据</li>
+<li>客户端基本操作</li>
+</ul>
+<p>Socker管道对象（用来请求与服务端连接）</p>
+<p>调用它的<code>getoutStream</code>方法得到字节输出流，字节输出流-&gt;高级打印流</p>
+<ul>
+<li>服务端基本操作</li>
+</ul>
+<p>ServerSocket类-服务端端口</p>
+<p>调用它的<code>accept</code>方法来建立管道Socker，返回的是Socket对象</p>
+<p>用socket调用方法得到字节输入流 -&gt;转换流-&gt;缓冲字符输入流</p>
+<ul>
+<li>让服务端可以处理多个客户端的通信需求</li>
+</ul>
+<p>利用<code>多线程</code></p>
+<p><em>每收到一个管道，交给一个独立的子线程负责读取消息</em></p>
+<ul>
+<li>利用多线程来优化上面的代码</li>
+</ul>
+<h2 id="junite">Junite单元测试<a class="headerlink" href="#junite" title="Permanent link">&para;</a></h2>
+<p>针对JAVA方法的测试，进而检查方法的正确性。</p>
+<p>问题：main不能得到测试的结果报告，不能自动化测试</p>
+<p>引入：Junit单元测试</p>
+<ul>
+<li>作用：可以生成全部方法的测试报告</li>
+</ul>
+<p>如果某个方法测试失败了，不会影响其他方法的测试</p>
+<ul>
+<li>
+<p>快速入门</p>
+</li>
+<li>
+<p>编写测试方法：公共的无参数无返回值的非静态方法</p>
+</li>
+<li>@Test注解：标注该方法是一个测试方法</li>
+<li>有返回值的方法，要写Assert断言，调用类的静态方法（失败消息，期待值，实际值）</li>
+</ul>
+<blockquote>
+<p>Junit框架jar包 是IDE自带的</p>
+</blockquote>
+<h2 id="_48">反射<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h2>
+<h3 id="_49">基本操作<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h3>
+<p>得到编译后class文件的对象</p>
+<ol>
+<li>反射第一步：获得Class对象</li>
+</ol>
+<p>方法：</p>
+<p>1.静态方法forName</p>
+<p>2.类名.class</p>
+<p>3.对象.class</p>
+<ol>
+<li>第二步获得构造器对象or变量对象or方法对象</li>
+</ol>
+<p>2.1获得构造器对象</p>
+<p>getDeclaredConstructors（）拿到所有构造器</p>
+<p>2.2利用构造器对象，创建对象</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>newInstance
+</code></pre></div>
+<blockquote>
+<p>私有构造器、方法、变量，要打开权限，setAccessible（true）</p>
+</blockquote>
+<ol>
+<li>获得成员变量对象</li>
+</ol>
+<p>getDeclareedFields()</p>
+<p>3.1利用成员变量赋值</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>set
+</code></pre></div>
+<p>3.2利用对象取值<code>get</code></p>
+<ol>
+<li>得到成员方法对象</li>
+</ol>
+<p>getDeclaredMethods()</p>
+<p>4.1触发方法</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>invoke
+</code></pre></div>
+<h3 id="_50">反射的作用<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h3>
+<p>1.绕过编译阶段为集合添加数据</p>
+<p>2.做通用框架的底层原理</p>
+<h2 id="_51">注解<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h2>
+<p>作用：对类、方法、变量做标记，然后进行特殊处理</p>
+<h2 id="_52">动态代理<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h2>
+<p>Proxy</p>
+<p>学不懂。。</p>
+<p>作用：提高代码复用性</p>
+<h2 id="xml">XML<a class="headerlink" href="#xml" title="Permanent link">&para;</a></h2>
+<ul>
+<li>定义：可扩展标记语言，用于自定义数据格式</li>
+<li>使用场景：存储和传输数据、作为软件的配置文件</li>
+<li>第一行：必须是文档规则</li>
+<li>XML标签规则：</li>
+</ul>
+<p><name></p>
+<p>这里面写你要的内容</p>
+<p></name></p>
+<ul>
+<li>
+<p>扩展</p>
+</li>
+<li>
+<p>注释：&lt;!- - xxxxxxxxx - -&gt;</p>
+</li>
+<li>特殊字符：</li>
+<li>CDATA区：里面就不会出现冲突～～</li>
+</ul>
+<h3 id="xml_1">XML解析技术<a class="headerlink" href="#xml_1" title="Permanent link">&para;</a></h3>
+<p>Dom4j</p>
+<p>是用树的方法来解析的</p>
+<h3 id="xml_2">XML检索技术<a class="headerlink" href="#xml_2" title="Permanent link">&para;</a></h3>
+<p>XPath</p>
+<p>绝对路径、相对路径、全文查找、属性查找</p>
+<blockquote>
+<p>下面是绝对👇路径的一些使用</p>
+</blockquote>
+<p>SAXReader解析器-》Document-〉调用方法（）-》得到元素element-〉调用元素的各种方法得到自己想要的东西</p>
+<h2 id="_53">设计模式<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h2>
+<ol>
+<li>工厂设计模式</li>
+</ol>
+<p>就是一种代码的设计模式</p>
+<p>和现实吻合</p>
+<ol>
+<li>装饰设计模式</li>
+</ol>
+<p>在不改变原类的基础上，动态地扩展新的功能</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../01-object-oriented/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 「01」面向对象" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  上一页
+                </span>
+                「01」面向对象
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Java-hxj1-notes/" class="md-footer__link md-footer__link--next" aria-label="下一页: Java核心技术卷I笔记" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  下一页
+                </span>
+                Java核心技术卷I笔记
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 王韬安
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/506537329?spm_id_from=333.337.0.0" target="_blank" rel="noopener" title="勇敢的湍流 on Bilibili" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/Wang-Taoan" target="_blank" rel="noopener" title="Wang-Taoan on Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tooltips", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.indexes", "navigation.expand", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fc8c2696.min.js"></script>
+      
+    
+  </body>
+</html>
