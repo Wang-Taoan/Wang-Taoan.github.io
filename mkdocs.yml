@@ -70,6 +70,14 @@ nav:
       - 「01」面向对象: BLOG/JAVA/01-object-oriented.md
       - 「02」面向对象: BLOG/JAVA/02-object-oriented.md
       - Java核心技术卷I笔记: BLOG/JAVA/Java-hxj1-notes.md
+    - 计算机体系结构:
+      - HDL下理解一台Hack计算机: BLOG/ComputerArchitecture/HDL下理解一台Hack计算机.md
+      - HDL下理解一个简易的CPU: BLOG/ComputerArchitecture/HDL下理解一个简易的CPU.md
+      - HDL下理解一个简易的Memory: BLOG/ComputerArchitecture/HDL下理解一个简易的Memory.md
+      - HDL下理解RAM8: BLOG/ComputerArchitecture/HDL下理解RAM8.md
+      - 区别RAM和ROM: BLOG/ComputerArchitecture/区分RAM和ROM.md
+      - ROM32K的单位换算: BLOG/ComputerArchitecture/ROM32K的单位换算.md
+      - Hack汇编语言: BLOG/ComputerArchitecture/Hack汇编语言.md
     - Markdown:
       - Markdown文件命名规则: BLOG/Markdown/name-regulation.md
       - Markdown使用语法: BLOG/Markdown/markdown-grammar.md
@@ -84,7 +92,7 @@ nav:
       - 如何下载音乐: BLOG/Other/download-music.md
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
-    - MacOS
+    #- MacOS
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
@@ -94,14 +102,14 @@ nav:
     - 目标:
       - JAVA学习目标【弃】: LEARNING/Target/java-target.md
       - 本学期目标: LEARNING/Target/target-2023.md
-    - More
+    #- More
 
   - 喜欢的东西:
     - LIKETHINGS/index.md
     - 喜欢的歌: LIKETHINGS/songs.md
     - 三国杀人物台词: LIKETHINGS/三国杀人物台词.md
     - 诗歌序: LIKETHINGS/诗歌序.md
-    - LIKE1
+    #- LIKE1
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
