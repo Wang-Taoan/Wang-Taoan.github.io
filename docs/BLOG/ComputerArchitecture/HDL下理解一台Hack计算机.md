@@ -2,9 +2,11 @@
 
 ## Hack计算机的组成
 一台Hack计算机由以下三部分组成
+
 * CPU
 * Memory（RAM、Screen、Keyboard）
 * ROM32K
+
 ![](https://pic.imgdb.cn/item/6416d2c0a682492fccbe1725.jpg)
 
 > 上图可能对RAM可能不太准确，准确应该是Memory（RAM、Screen、Keyboard）
@@ -79,7 +81,4 @@ M=D
 ```
 
 ---
-其实每个存储单元中，放的机器语言，也就是16位二进制数（16个1/0）
-
-
-
+其实每个存储单元中，放的是机器语言，也就是16位二进制数（16个1/0）
