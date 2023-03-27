@@ -77,7 +77,25 @@ nav:
       - HDL下理解RAM8: BLOG/ComputerArchitecture/HDL下理解RAM8.md
       - 区别RAM和ROM: BLOG/ComputerArchitecture/区分RAM和ROM.md
       - ROM32K的单位换算: BLOG/ComputerArchitecture/ROM32K的单位换算.md
-      - Hack汇编语言: BLOG/ComputerArchitecture/Hack汇编语言.md
+      - Hack汇编语言: BLOG/ComputerArchitecture/Hack汇编语言.md    
+
+    - 计算机基础:
+      - 0 总结: BLOG/ComputerFundamentals/0总结.md
+      - 1 一个内存IC的容量: BLOG/ComputerFundamentals/一个内存IC的容量.md
+      - 2 硬盘和内存: BLOG/ComputerFundamentals/硬盘和内存.md
+      - 3 认识一下计算机主板: BLOG/ComputerFundamentals/认识一下计算机主板.md
+      - 4 认识一下虚拟机: BLOG/ComputerFundamentals/认识一下虚拟机.md
+      - 5 认识一下BIOS: BLOG/ComputerFundamentals/认识一下BIOS.md
+      - 6 操作系统的API差异: BLOG/ComputerFundamentals/操作系统的API差异.md
+      - 7 二进制求负数: BLOG/ComputerFundamentals/二进制求负数.md
+      - 8 操作系统的API差异: BLOG/ComputerFundamentals/操作系统的API差异.md
+      - 9 函数调用机制的理解: BLOG/ComputerFundamentals/函数调用机制的理解.md
+      - 10 初识多线程: BLOG/ComputerFundamentals/初识多线程.md
+      - 11 初识中断: BLOG/ComputerFundamentals/初识中断.md
+      - 12 Windows操作系统: BLOG/ComputerFundamentals/Windows操作系统.md
+      - 13 DMA: BLOG/ComputerFundamentals/DMA.md
+      - 14 VRAM和GPU: BLOG/ComputerFundamentals/VRAM和GPU.md
+      
     - Markdown:
       - Markdown文件命名规则: BLOG/Markdown/name-regulation.md
       - Markdown使用语法: BLOG/Markdown/markdown-grammar.md
