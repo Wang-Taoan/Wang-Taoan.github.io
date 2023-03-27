@@ -166,9 +166,9 @@ markdown_extensions:
   - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
   - pymdownx.details # admonition需要
 
-  - pymdownx.critic # 下面这是文本高亮、下划线、删除线需要
+  # - pymdownx.critic # 下面这是文本高亮、下划线、删除线需要
   - pymdownx.caret # https://squidfunk.github.io/mkdocs-material/reference/formatting/
-  - pymdownx.keys
+  # - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
 # [Extensions]
