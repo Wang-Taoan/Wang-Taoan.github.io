@@ -247,3 +247,24 @@ int gcd(int m,int n)
 > 注意，在使用第二种方式赋值时，必须手动添加 null 结尾符（'\0'），否则会导致程序的错误。
 
 ![img](./images/S5.png){width="700"}
+
+## 15.最简形式分数
+
+两个分数相加->分子分母除以最大公约数
+
+分子分母求最大公约数不用函数的形式。
+
+```
+    // 约分
+    int divisor = b.fenzi;
+    int dividend = b.fenmu;
+    // 主函数内如何求最大公约数
+    while (dividend != 0)
+    {
+        int remainder = divisor % dividend;
+        divisor = dividend;
+        dividend = remainder;
+    }
+    b.fenzi /= divisor;
+    b.fenmu /= divisor;
+```
