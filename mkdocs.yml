@@ -119,6 +119,7 @@ nav:
     - 如何去学好一门课: LEARNING/how-to-learn-a-course-well.md
     - 目标:
       - JAVA学习目标【弃】: LEARNING/Target/java-target.md
+      - 大二下日常学习流: LEARNING/Daily-learning-stream.md
       - 本学期目标: LEARNING/Target/target-2023.md
     #- More
 
@@ -136,15 +137,18 @@ nav:
     - LIFE/index.md
     - 随笔:
       - 前言: LIFE/Jottings/随笔前言.md
+      - 2023-03: LIFE/Jottings/2023-03.md
       - 2023-02: LIFE/Jottings/2023-02.md
       - 2023-01: LIFE/Jottings/2023-01.md
       - 2022-12: LIFE/Jottings/2022-12.md
       - 2022-11: LIFE/Jottings/2022-11.md
       #- 文章3:<相对路径>
     - 文章:
+      - 对活着的思考: LIFE/Article/对活着的思考.md
       - 我与三北理发店: LIFE/Article/我与三北理发店.md
       - 写博客和看博客之间的平衡: LIFE/Article/写博客和看博客之间的平衡.md
     - 阅读:
+      - 2023-03: LIFE/Read/2023-03book.md
       - 2023-02: LIFE/Read/2023-02book.md
       - 读后有感:
         - 《自卑与超越》: LIFE/Read/Feelings-After-Read/Inferiority-and-transcendence.md
