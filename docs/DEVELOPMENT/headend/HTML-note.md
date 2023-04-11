@@ -1,0 +1,66 @@
+# HTML学习笔记
+
+> 自学HTML，开始2023/04/09
+
+## 「1」文本基础
+
+1. 段落标签：p
+2. 换行标签：br
+3. 水平线：hr（horizon）
+4. 文本格式化标签：
+	* 加粗：b
+	* 下划线：u
+	* 删除线：s
+	* 倾斜：i
+
+---
+
+## 「2」媒体基础
+
+* 图片标签：img ---- `<img src = "##" alt=".  ">`
+
+> # 是空链接
+
+扩展的属性：title、width、height
+
+> 如果width、height只设置了一个，另外一个会自动等比例缩放。
+
+* 相对路径(同级别)
+	* 第一种写法：`./xxxx.jpg`
+	* 第二种写法: `xxxx.jpg`
+* 相对路径(上级)
+	* `../xxxx.jpg`
+
+* 音频标签：audio
+* 视频抱歉：video
+
+扩展的属性：controls（显示播放的按钮控件）、……
+
+* 超链接：a
+
+## 「3」表基础
+
+* 无序列表：ul 包裹 li
+* 有序列表：ol 包裹 li
+* 自定义列表：dl 包裹 dt、dd
+
+* 表格：table>tr>td
+* 表格标题：caption 
+* 表头：th
+* 合并单元格：td下属性rowspan 、colspan
+
+> table扩展属性border width height ，已经淘汰，用CSS来设置
+
+---
+* 表单：input、form、button
+登陆注册搜索页面 会用到。
+
+
+---
+
+## 语义化标签
+
+* div:独占一行
+* span：一行可以写很多个span
+
+* 字符实体：`&nbsp;`空格
