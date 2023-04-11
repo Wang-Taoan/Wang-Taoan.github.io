@@ -101,6 +101,7 @@ nav:
       - Markdown使用语法: BLOG/Markdown/markdown-grammar.md
       #- 文章3:<相对路径>
     - 生活中的计算机:
+      - U盘-SSD存储大小缩水: BLOG/CsInTheLife/SSD-in-life.md
       - 运行商所谓的宽带: BLOG/CsInTheLife/broadband.md
       - 字节和字符的区别: BLOG/CsInTheLife/characters-and-bytes.md
       - HTTP与HTTPS的区别: BLOG/CsInTheLife/HTTP-HTTPS.md
