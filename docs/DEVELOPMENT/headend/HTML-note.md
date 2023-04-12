@@ -19,7 +19,7 @@
 
 * 图片标签：img ---- `<img src = "##" alt=".  ">`
 
-> # 是空链接
+> `#` 是空链接
 
 扩展的属性：title、width、height
 
