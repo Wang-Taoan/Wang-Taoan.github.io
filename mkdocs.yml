@@ -118,8 +118,8 @@ nav:
   - 开发:
     - DEVELOPMENT/index.md
     - 前端:
-      - HTML学习笔记: DEVELOPMENT/headend/HTML-note.md
-      - CSS学习中: DEVELOPMENT/headend/CSS-note.md
+      - HTML: DEVELOPMENT/headend/HTML-note.md
+      - CSS: DEVELOPMENT/headend/CSS-note.md
   - 学习:
     - LEARNING/index.md
     - 如何去学好一门课: LEARNING/how-to-learn-a-course-well.md
@@ -143,6 +143,7 @@ nav:
     - LIFE/index.md
     - 随笔:
       - 前言: LIFE/Jottings/随笔前言.md
+      - 2023-04: LIFE/Jottings/2023-04.md
       - 2023-03: LIFE/Jottings/2023-03.md
       - 2023-02: LIFE/Jottings/2023-02.md
       - 2023-01: LIFE/Jottings/2023-01.md
