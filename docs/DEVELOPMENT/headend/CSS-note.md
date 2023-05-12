@@ -37,6 +37,7 @@
 ## 2 字体-文本样式
 
 **字体：**
+
 1. 文字大小：`font-size:数字+px` 默认是16px
 2. 文字粗细：`font-weight:400正常700加粗`
 3. 文字倾斜
@@ -50,6 +51,7 @@
 
 ---
 **文本样式：**
+
 1. 文本缩进：`text-indent:数字2+em;` 2表示首行缩进2个字的大小
 2. 容器里的内容**水平对齐**：`text-align:center/left/right;`
 3. 去掉a标签的下划线：`text-decoration:none`
