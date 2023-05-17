@@ -95,7 +95,12 @@ nav:
       - 12 Windows操作系统: BLOG/ComputerFundamentals/Windows操作系统.md
       - 13 DMA: BLOG/ComputerFundamentals/DMA.md
       - 14 VRAM和GPU: BLOG/ComputerFundamentals/VRAM和GPU.md
-      
+
+    - 计算机网络:
+      - 网络知识点汇总: BLOG/Network/Summary-of-network.md
+      - 期末计算题汇总: BLOG/Network/Summary-of-calculation.md
+      - 什么是VPN: BLOG/Network/What-is-VPN.md
+
     - Markdown:
       - Markdown文件命名规则: BLOG/Markdown/name-regulation.md
       - Markdown使用语法: BLOG/Markdown/markdown-grammar.md
