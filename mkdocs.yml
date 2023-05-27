@@ -106,13 +106,18 @@ nav:
       - Markdown文件命名规则: BLOG/Markdown/name-regulation.md
       - Markdown使用语法: BLOG/Markdown/markdown-grammar.md
       #- 文章3:<相对路径>
+    - MacOS:
+      - Homebrew: BLOG/MacOS/Homebrew.md
+      - Git: BLOG/MacOS/git.md
+      - 环境变量: BLOG/MacOS/环境变量.md
+      - 图片格式转换: docs/BLOG/MacOS/mac-imgs.md
+      - Tampermonkey: BLOG/MacOS/Tampermonkey.md
     - 生活中的计算机:
-      - U盘-SSD存储大小缩水: BLOG/CsInTheLife/SSD-in-life.md
-      - 运行商所谓的宽带: BLOG/CsInTheLife/broadband.md
-      - 字节和字符的区别: BLOG/CsInTheLife/characters-and-bytes.md
-      - HTTP与HTTPS的区别: BLOG/CsInTheLife/HTTP-HTTPS.md
-    - 浏览器扩展程序:
-      - Tampermonkey: BLOG/BrowserExtension/Tampermonkey插件安装和使用.md
+      - SSD存储大小怎么小了: BLOG/CsInTheLife/SSD-in-life.md
+      - 宽带的实际速度: BLOG/CsInTheLife/broadband.md
+      - 字节和字符: BLOG/CsInTheLife/characters-and-bytes.md
+      - HTTP与HTTPS: BLOG/CsInTheLife/HTTP-HTTPS.md
+
     - 其他:
       - 如何下载音乐: BLOG/Other/download-music.md
       #- 文章2:<相对路径>
