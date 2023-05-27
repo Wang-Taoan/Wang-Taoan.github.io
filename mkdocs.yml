@@ -110,7 +110,7 @@ nav:
       - Homebrew: BLOG/MacOS/Homebrew.md
       - Git: BLOG/MacOS/git.md
       - 环境变量: BLOG/MacOS/环境变量.md
-      - 图片格式转换: docs/BLOG/MacOS/mac-imgs.md
+      - 图片格式转换: BLOG/MacOS/mac-imgs.md
       - Tampermonkey: BLOG/MacOS/Tampermonkey.md
     - 生活中的计算机:
       - SSD存储大小怎么小了: BLOG/CsInTheLife/SSD-in-life.md
