@@ -20,6 +20,7 @@ scanf("%d%c%d",&a,&c,&b);
 ```
 
 ---
+
 **代码实现** ：
 
 难点：在于如何用C实现整除。当两个操作数都是整数时，C语言中的除法运算符将执行整数除法，即只返回结果的整数部分而舍弃小数部分。当两个操作数都是浮点数的话则返回浮点数结果。如果想要获得整数部分，可以用 **类型转化**
@@ -183,8 +184,11 @@ void printChar(char c , int m){
 
 1 0
 ```
+
 ---
+
 代码实现：
+
 ```c
 #include <stdio.h>
 
@@ -254,6 +258,7 @@ return 1;
 ```
 
 ---
+
 代码实现：
 
 ```c
@@ -402,6 +407,7 @@ int main() {
 ```
 
 ---
+
 我的实现：
 
 ```c
@@ -502,13 +508,13 @@ return num;
 
 最大值和最小值
 
-```
+```c
 6 
 10 3 4 5 8 2
 
 max=10,min=2
 
----
+--
 
 #include"stdio.h"
 void inputarray(int a[],int n);
@@ -530,7 +536,9 @@ int main()
 @@1
 ```
 ---
+
 代码实现：
+
 ```c
 #include"stdio.h"
 
@@ -617,7 +625,7 @@ if (*min>a[i])
 
 说明：任意两个复数的和是 (a+bi)+(c+di)=(a+c)+(b+d)i.
 
-```
+```c
 3 4 5 6
 
 (3+4i) + (5+6i) = 8 + 10i
@@ -682,11 +690,11 @@ struct complex multiply(struct complex x, struct complex y){
 
 **分析：** 节点p每次使用都是malloc一下、malloc的使用、销毁节点时候创建一个新节点再用free
 
-```
+```c
 XYUW
 
 W U Y X
----
+--
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -805,11 +813,11 @@ void largestnode2(struct node *head,struct node **ppmax);
 
 一个整数，表示最大结点的数据域的值。
 
-```
+```c
 9 2 17 8 11 13
 
 17
----
+--
 #include <stdio.h>
 #include <stdlib.h>
 struct node       //结点数据类型
@@ -916,6 +924,7 @@ void largestnode2(struct node *head,struct node **ppmax)
 ```
 
 ---
+
 代码实现：
 
 ```c
