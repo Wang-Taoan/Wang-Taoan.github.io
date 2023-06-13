@@ -508,35 +508,6 @@ return num;
 
 最大值和最小值
 
-```c
-6 
-10 3 4 5 8 2
-
-max=10,min=2
-
---
-
-#include"stdio.h"
-void inputarray(int a[],int n);
-void maxmin(int a[],int n,int *max,int *min );
-
-int main()
-{
-    int b[100];
-    int m,n,k;
-    scanf("%d",&k);
-    inputarray(b,k);
-    maxmin(b,k,&m,&n);
-    printf("max=%d,min=%d\n",m,n);
-    return 1;
-}
-
-@@1
-
-@@1
-```
----
-
 代码实现：
 
 ```c
