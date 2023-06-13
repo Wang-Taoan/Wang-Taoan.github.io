@@ -65,6 +65,7 @@ nav:
       - 「01」初学C语言: BLOG/C/First-learnC1.md
       - 「02」初学C语言: BLOG/C/First-learnC2.md
       -  不太明白的语法: BLOG/C/ignorantOfSyntax.md
+      - 期末复习总结: BLOG/C/C期末复习总结.md
     - JAVA:
       - 入门Java: BLOG/JAVA/begin-java.md
       - 「01」面向对象: BLOG/JAVA/01-object-oriented.md
@@ -106,6 +107,7 @@ nav:
 
     - 其他:
       - 如何下载音乐: BLOG/Other/download-music.md
+      - 概率论期末总结: BLOG/Other/概率期末题型总结.md
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
     #- MacOS
