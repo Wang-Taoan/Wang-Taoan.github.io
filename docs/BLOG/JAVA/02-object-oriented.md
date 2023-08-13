@@ -1,23 +1,5 @@
 # 「02」面向对象
 
-> 学的是B站黑马课程
->
-> 内容&部分课程差异
->
-> 省流：第二套课程注重基础，但是没有更新完。
->
-> 第一套课程讲的快，可以省下很多时间。
-
-[第一套JAVA课程](【Java入门基础视频教程，java零基础自学就选黑马程序员Java入门教程（含Java项目和Java真题）】https://www.bilibili.com/video/BV1Cv411372m?vd_source=09a272bb741f26386eb2109c1d3dacfc)
-
-一些数据结构（含lambda）-》*Stream流-〉异常-》#IO-〉线程-》 反射〉TCPIP
-
-[第二套JAVA课程](https://www.bilibili.com/video/BV17F411T7Ao?vd_source=09a272bb741f26386eb2109c1d3dacfc)
-
-一些常见查找算法-〉*lambda-》*集合List-〉*数据结构TREE Set
-
-Maven-异常-#IO流
-
 ## 常见七大查找算法
 
 ### 简介
