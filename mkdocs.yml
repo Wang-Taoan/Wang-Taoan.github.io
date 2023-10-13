@@ -131,9 +131,17 @@ nav:
 
   - 喜欢:
     - LIKETHINGS/index.md
-    - 喜欢的歌: LIKETHINGS/songs.md
-    - 三国杀人物台词: LIKETHINGS/三国杀人物台词.md
-    - 诗词歌赋: LIKETHINGS/诗词歌赋.md
+    - 喜欢的:
+      - 喜欢的歌手: LIKETHINGS/Like/Singer.md
+      - 喜欢的流行歌: LIKETHINGS/Like/songs.md
+      - 喜欢的诗词歌赋: LIKETHINGS/Like/poems.md
+    - Coc:
+      - Coc 理想的状态: LIKETHINGS/Coc/CocState.md
+      - Coc 流派: LIKETHINGS/Coc/CocTroop.md
+      - Coc 设置: LIKETHINGS/Coc/CocSetting.md
+    - 三国杀:
+      - 三国杀 英雄台词: LIKETHINGS/Sgs/三国杀人物台词.md
+      - 三国杀 获得道具途径: LIKETHINGS/Sgs/sgsWays.md
     #- LIKE1
       #- 文章1:<相对路径>
       #- 文章2:<相对路径>
