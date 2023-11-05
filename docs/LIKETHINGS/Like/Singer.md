@@ -18,6 +18,8 @@ JJLin
 
 很喜欢林俊杰的音色，听着很有种青春跃动的感觉
 
+- [不为谁而作的歌](https://www.bilibili.com/video/BV16L411i7mm/?share_source=copy_web&vd_source=09a272bb741f26386eb2109c1d3dacfc)
+
 ## 陈奕迅
 
 eason chan
