@@ -45,7 +45,7 @@ edit_uri: edit/main/docs # 编辑按钮跳转的链接
 repo_url: https://github.com/Wang-Taoan/Wang-Taoan.github.io #右上角跳转的链接
 repo_name: Wang-taoan.github.io # 右上角的名字
 ## [bottom-left corner]
-copyright: Copyright &copy; 2023 王韬安 # 左下角的版权声明
+copyright: Copyright &copy; 王韬安 # 左下角的版权声明
 ## [bottom-right corner]
 extra:
   homepage: https://wang-taoan.github.io/
@@ -117,16 +117,31 @@ nav:
       #- 文章3:<相对路径>
   - 开发:
     - DEVELOPMENT/index.md
+    - 开发兴趣: DEVELOPMENT/interests.md
     - 前端:
-      - HTML: DEVELOPMENT/headend/HTML-note.md
-      - CSS: DEVELOPMENT/headend/CSS-note.md
-  - 学习:
-    - LEARNING/index.md
-    - 如何去学好一门课: LEARNING/how-to-learn-a-course-well.md
-    - 目标:
-      - 开发学习推荐: LEARNING/Target/Recommend.md
-      - 大三上日常学习流: LEARNING/Target/202309-Learning.md
-      - 大二下日常学习流: LEARNING/Target/202303-Learning.md
+      - H5: DEVELOPMENT/Front-end/h5.md
+      - CSS3: DEVELOPMENT/Front-end/css3.md
+      - Vue Notes: DEVELOPMENT/Front-end/Vue2.md
+      - element+echarts: DEVELOPMENT/Front-end/elementecharts.md
+      - 开发问题记录: DEVELOPMENT/Front-end/recordquestions.md
+    - 后端:
+      - Spring: DEVELOPMENT/Back-end/Spring.md
+      - MySQL: DEVELOPMENT/Back-end/MySQL.md
+      - ruoyi-vue: DEVELOPMENT/Back-end/ruoyi.md
+      - interface: DEVELOPMENT/Back-end/interface.md
+    - App:
+      - uni-app: DEVELOPMENT/App/uniapp.md
+      - Android: DEVELOPMENT/App/Android.md
+    - Git:
+      - Git notes: DEVELOPMENT/Git/git.md
+  - 规划:
+    - PLAN/index.md
+    - 计划:
+      - 本科计划: PLAN/plan/24plan.md
+    - 学习流:
+      - 开发学习推荐: PLAN/Target/Recommend.md
+      - 大三上日常学习流: PLAN/Target/202309-Learning.md
+      - 大二下日常学习流: PLAN/Target/202303-Learning.md
     #- More
 
   - 喜欢:
@@ -151,19 +166,13 @@ nav:
     - LIFE/index.md
     - 随笔:
       - 前言: LIFE/Jottings/随笔前言.md
-      - 2023-11: LIFE/Jottings/2023-11.md
-      - 2023-10: LIFE/Jottings/2023-10.md
-      - 2023-09: LIFE/Jottings/2023-09.md
-      - 2023-08: LIFE/Jottings/2023-08.md
-      - 2023-07: LIFE/Jottings/2023-07.md
-      - 2023-06: LIFE/Jottings/2023-06.md
-      - 2023-05: LIFE/Jottings/2023-05.md
-      - 2023-04: LIFE/Jottings/2023-04.md
-      - 2023-03: LIFE/Jottings/2023-03.md
-      - 2023-02: LIFE/Jottings/2023-02.md
-      - 2023-01: LIFE/Jottings/2023-01.md
-      - 2022-12: LIFE/Jottings/2022-12.md
-      - 2022-11: LIFE/Jottings/2022-11.md
+      - 随笔记 | 2311-2312: LIFE/Jottings/2311-2312.md
+      - 随笔记 | 2309-2310: LIFE/Jottings/2309-2310.md
+      - 随笔记 | 2307-2308: LIFE/Jottings/2307-2308.md
+      - 随笔记 | 2305-2306: LIFE/Jottings/2305-2306.md
+      - 随笔记 | 2303-2304: LIFE/Jottings/2303-2304.md
+      - 随笔记 | 2301-2302: LIFE/Jottings/2301-2302.md
+      - 随笔记 | 2211-2212: LIFE/Jottings/2211-2212.md
       #- 文章3:<相对路径>
     - 文章:
       - 浮躁时怎么办: LIFE/Article/Address-Anxiety.md
@@ -189,6 +198,7 @@ nav:
   - 转载:
     - REPRINT/index.md
     - 提问的智慧: REPRINT/how-to-ask-questions-the-smart-way.md
+    - 如何学好一门课: REPRINT/how-to-learn-a-course-well.md
     - 演好自己的剧本: REPRINT/舞台.md
     - 我们为什么要读书: REPRINT/why-we-should-readbook.md
     - 生活在树上: REPRINT/live-in-the-tree.md
