@@ -1,8 +1,8 @@
 # [Info]
-site_name: 王韬安的个人网站 # 左上角标题
+site_name: 韬安的个人网站 # 左上角标题
 site_url: https://wang-taoan.github.io
 site_author: 王韬安
-site_description: 王韬安的个人网站
+site_description: 韬安的个人网站
 
 # [UI]
 theme:
@@ -45,7 +45,7 @@ edit_uri: edit/main/docs # 编辑按钮跳转的链接
 repo_url: https://github.com/Wang-Taoan/Wang-Taoan.github.io #右上角跳转的链接
 repo_name: Wang-taoan.github.io # 右上角的名字
 ## [bottom-left corner]
-copyright: Copyright &copy; 王韬安 # 左下角的版权声明
+copyright: Copyright &copy; 2023-2024 王韬安 # 左下角的版权声明
 ## [bottom-right corner]
 extra:
   homepage: https://wang-taoan.github.io/
@@ -166,6 +166,8 @@ nav:
     - LIFE/index.md
     - 随笔:
       - 前言: LIFE/Jottings/随笔前言.md
+      - 202403: LIFE/Jottings/202403.md
+      - 随笔记 | 2401-2402: LIFE/Jottings/2401-2402.md
       - 随笔记 | 2311-2312: LIFE/Jottings/2311-2312.md
       - 随笔记 | 2309-2310: LIFE/Jottings/2309-2310.md
       - 随笔记 | 2307-2308: LIFE/Jottings/2307-2308.md
