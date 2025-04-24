@@ -7,6 +7,7 @@ site_description: 韬安的个人网站
 # [UI]
 theme:
   name: material
+  favicon: ./images/favicon.png # 网站图标
   palette:
     - scheme: default # 日间模式
       primary: indigo # 主题颜色indigo red
@@ -23,7 +24,8 @@ theme:
   features: 
     - content.tooltips
     - navigation.instant # Instant loading
-    - navigation.tracking #Anchor tracking 不知道有什么用
+    - navigation.instant.progress # 进度指示器
+    - navigation.tracking #Anchor tracking 
     - navigation.tabs # 使用Tab来进行分类，就是顶层的tabs菜单
     - navigation.tabs.sticky # 锁住Tabs，向下划的时候，上面的tabs不会消失
     # - navigation.sections # 对左边菜单栏的优化，加了，文章菜单全部自动展开。不加的话有个收起的按钮
@@ -39,23 +41,26 @@ theme:
   language: zh # 一些提示性的文字会变成中文
   icon:
     repo: fontawesome/brands/github
-    logo: simple/datadog # logo查询https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+    logo: logo-monochrome # logo查询https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
 repo_url: https://github.com/Wang-Taoan/Wang-Taoan.github.io #右上角跳转的链接
 repo_name: Wang-taoan.github.io # 右上角的名字
 ## [bottom-left corner]
-copyright: Copyright &copy; 2023-2024 王韬安 # 左下角的版权声明
+copyright: 2023-2025 王韬安 # 左下角的版权声明
 ## [bottom-right corner]
 extra:
   homepage: https://wang-taoan.github.io/
   social: # icons
     - icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/506537329?spm_id_from=333.337.0.0
-      name: 勇敢的湍流 on Bilibili # 鼠标悬浮提示
+      name: Bilibili丨勇敢的湍流  # 鼠标悬浮提示
+    - icon: simple/xiaohongshu
+      link: https://www.xiaohongshu.com/user/profile/5be67469c6138500017451d4
+      name: 小红书丨Santiago  # 鼠标悬浮提示
     - icon: fontawesome/brands/github
       link: https://github.com/Wang-Taoan
-      name: Wang-Taoan on Github
+      name: Github丨Wang-Taoan
 
 # [Navigtion]
 nav:
@@ -101,10 +106,10 @@ nav:
       - 图片格式转换: BLOG/MacOS/mac-imgs.md
       - Tampermonkey: BLOG/MacOS/Tampermonkey.md
     - 生活中的计算机:
-      - SSD存储大小怎么小了: BLOG/CsInTheLife/SSD-in-life.md
-      - 宽带的实际速度: BLOG/CsInTheLife/broadband.md
-      - 字节和字符: BLOG/CsInTheLife/characters-and-bytes.md
-      - HTTP与HTTPS: BLOG/CsInTheLife/HTTP-HTTPS.md
+      - SSD存储大小怎么小了: BLOG/CsInTheESSAY/SSD-in-ESSAY.md
+      - 宽带的实际速度: BLOG/CsInTheESSAY/broadband.md
+      - 字节和字符: BLOG/CsInTheESSAY/characters-and-bytes.md
+      - HTTP与HTTPS: BLOG/CsInTheESSAY/HTTP-HTTPS.md
 
     - 其他:
       - 如何下载音乐: BLOG/Other/download-music.md
@@ -136,15 +141,12 @@ nav:
       - Git notes: DEVELOPMENT/Git/git.md
   - 规划:
     - PLAN/index.md
-    - 计划:
-      - 本科计划: PLAN/plan/24plan.md
     - 学习流:
       - 开发学习推荐: PLAN/Target/Recommend.md
       - 大三上日常学习流: PLAN/Target/202309-Learning.md
       - 大二下日常学习流: PLAN/Target/202303-Learning.md
-    #- More
-
-  - 喜欢:
+    
+  - 生活:
     - LIKETHINGS/index.md
     - 喜欢的:
       - 喜欢的歌手: LIKETHINGS/Like/Singer.md
@@ -162,46 +164,52 @@ nav:
       #- 文章2:<相对路径>
       #- 文章3:<相对路径>
    
-  - 生活: 
-    - LIFE/index.md
-    - 随笔:
-      - 前言: LIFE/Jottings/随笔前言.md
-      - 202403: LIFE/Jottings/202403.md
-      - 随笔记 | 2401-2402: LIFE/Jottings/2401-2402.md
-      - 随笔记 | 2311-2312: LIFE/Jottings/2311-2312.md
-      - 随笔记 | 2309-2310: LIFE/Jottings/2309-2310.md
-      - 随笔记 | 2307-2308: LIFE/Jottings/2307-2308.md
-      - 随笔记 | 2305-2306: LIFE/Jottings/2305-2306.md
-      - 随笔记 | 2303-2304: LIFE/Jottings/2303-2304.md
-      - 随笔记 | 2301-2302: LIFE/Jottings/2301-2302.md
-      - 随笔记 | 2211-2212: LIFE/Jottings/2211-2212.md
+  - 随笔: 
+    - ESSAY/index.md
+    - 随笔记:
+      - 随笔记 | 前言: ESSAY/Jottings/随笔前言.md
+      - 随笔记 | 2409-2411: ESSAY/Jottings/2409-2411.md
+      - 随笔记 | 2407-2408: ESSAY/Jottings/2407-2408.md
+      - 随笔记 | 2405-2406: ESSAY/Jottings/2405-2406.md 
+      - 随笔记 | 2403-2404: ESSAY/Jottings/2403-2404.md
+      - 随笔记 | 2401-2402: ESSAY/Jottings/2401-2402.md
+      - 随笔记 | 2311-2312: ESSAY/Jottings/2311-2312.md
+      - 随笔记 | 2309-2310: ESSAY/Jottings/2309-2310.md
+      - 随笔记 | 2307-2308: ESSAY/Jottings/2307-2308.md
+      - 随笔记 | 2305-2306: ESSAY/Jottings/2305-2306.md
+      - 随笔记 | 2303-2304: ESSAY/Jottings/2303-2304.md
+      - 随笔记 | 2301-2302: ESSAY/Jottings/2301-2302.md
+      - 随笔记 | 2211-2212: ESSAY/Jottings/2211-2212.md
       #- 文章3:<相对路径>
     - 文章:
-      - Shall we talk?: LIFE/Article/Shall-we-talk.md
-      - 浮躁时怎么办: LIFE/Article/Address-Anxiety.md
-      - 理想中的女生: LIFE/Article/Ideal-girl.md
-      - 学校自习室选择: LIFE/Article/Selection-of-self-study-rooms.md
-      - 朋友圈自我和解: LIFE/Article/pyq-self-confident.md
-      - 童年和电脑的回忆: LIFE/Article/ChildhoodMemories.md
-      - 对活着的思考: LIFE/Article/Thinking-about-Being-Alive.md
-      - 我与三北理发店: LIFE/Article/Sanbei-BarberShop.md
-      - 写博客和看博客之间的平衡: LIFE/Article/writing-reading-blogs.md
-    - 阅读:
-      - 2023-: LIFE/Read/2023book.md
-      - 摘录和有感:
-        - 《小林漫画：人间烟火气》: LIFE/Read/Feelings-After-Read/《小林漫画：人间烟火气》.md
-        - 《史蒂夫·乔布斯传》: LIFE/Read/Feelings-After-Read/《史蒂夫·乔布斯传》.md
-        - 《富爸爸穷爸爸》: LIFE/Read/Feelings-After-Read/《富爸爸穷爸爸》.md
-        - 《德米安：彷徨少年时》: LIFE/Read/Feelings-After-Read/《德米安：彷徨少年时》.md
-        - 《走到人生边上:自问自答》: LIFE/Read/Feelings-After-Read/《走到人生边上》.md
-        - 《自卑与超越》: LIFE/Read/Feelings-After-Read/Inferiority-and-transcendence.md
-        - 《不负我心》: LIFE/Read/Feelings-After-Read/bufuwoxin.md
+      - 25考研回顾: ESSAY/Article/2024kaoyan.md
+      - Shall we talk?: ESSAY/Article/Shall-we-talk.md
+      - 浮躁时怎么办: ESSAY/Article/Address-Anxiety.md
+      - 理想中的女生: ESSAY/Article/Ideal-girl.md
+      - 学校自习室选择: ESSAY/Article/Selection-of-self-study-rooms.md
+      - 朋友圈自我和解: ESSAY/Article/pyq-self-confident.md
+      - 童年和电脑的回忆: ESSAY/Article/ChildhoodMemories.md
+      - 对活着的思考: ESSAY/Article/Thinking-about-Being-Alive.md
+      - 我与三北理发店: ESSAY/Article/Sanbei-BarberShop.md
+      - 写博客和看博客之间的平衡: ESSAY/Article/writing-reading-blogs.md
 
-    
+  - 阅读:
+    - READ/index.md
+    - 年度合集: 
+        - 2024: READ//YearlySet/2024.md
+        - 2023: READ/YearlySet/2023.md
+    - 特别摘录: 
+        - 《小林漫画：人间烟火气》: READ/SpecialCollection/《小林漫画：人间烟火气》.md
+        - 《史蒂夫·乔布斯传》: READ/SpecialCollection/《史蒂夫·乔布斯传》.md
+        - 《富爸爸穷爸爸》: READ/SpecialCollection/《富爸爸穷爸爸》.md
+        - 《德米安：彷徨少年时》: READ/SpecialCollection/《德米安：彷徨少年时》.md
+        - 《走到人生边上:自问自答》: READ/SpecialCollection/《走到人生边上》.md
+        - 《自卑与超越》: READ/SpecialCollection/Inferiority-and-transcendence.md
+        - 《不负我心》: READ/SpecialCollection/bufuwoxin.md    
+
   - 转载:
     - REPRINT/index.md
     - 提问的智慧: REPRINT/how-to-ask-questions-the-smart-way.md
-    - 如何学好一门课: REPRINT/how-to-learn-a-course-well.md
     - 演好自己的剧本: REPRINT/舞台.md
     - 我们为什么要读书: REPRINT/why-we-should-readbook.md
     - 生活在树上: REPRINT/live-in-the-tree.md
@@ -245,8 +253,6 @@ plugins:
   - search:
       lang: en
   - tags
-  # - git-revision-date-localized: # 不知道怎么用不了
-     # enable_creation_date: true #https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
-      # type: date
+
 extra_css: 
   - mkdocs/css/unordered-list-symbols.css # multiplt unordered list symbols
