@@ -10,5 +10,8 @@ title: 网站构建说明
 
 
 
-通过 mkdocs serve 命令 实时预览
 
+```
+source venv/bin/activate // 激活py虚拟环境
+mkdocs serve // 命令 实时预览
+```
