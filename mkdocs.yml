@@ -50,6 +50,10 @@ repo_name: Wang-taoan.github.io # 右上角的名字
 copyright: 2023-2025 王韬安 # 左下角的版权声明
 ## [bottom-right corner]
 extra:
+  # [添加社交网络图标和链接]
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
+  # 搜索图标：https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search
+  # name 会在鼠标悬浮时提示
   homepage: https://wang-taoan.github.io/
   social: # icons
     - icon: fontawesome/brands/bilibili
@@ -142,7 +146,8 @@ nav:
     - LIKETHINGS/index.md
     - 喜欢的:
       - 喜欢的歌手: LIKETHINGS/Like/Singer.md
-      - 喜欢的流行歌: LIKETHINGS/Like/songs.md
+      - 「1」喜欢的歌: LIKETHINGS/Like/songs1.md
+      - 「2」喜欢的歌: LIKETHINGS/Like/songs2.md
       - 喜欢的诗: LIKETHINGS/Like/poems.md
     - 无畏契约:
       - 无畏契约 喜欢的枪皮: LIKETHINGS/Valorant/guns.md
@@ -160,6 +165,9 @@ nav:
   - 随笔: 
     - ESSAY/index.md
     - 随笔记:
+      - 随笔记 | 2506: ESSAY/Jottings/2506.md
+      - 随笔记 | 2505: ESSAY/Jottings/2505.md
+      - 随笔记 | 2504: ESSAY/Jottings/2504.md
       - 随笔记 | 前言: ESSAY/Jottings/随笔前言.md
       - 随笔记 | 2409-2411: ESSAY/Jottings/2409-2411.md
       - 随笔记 | 2407-2408: ESSAY/Jottings/2407-2408.md
@@ -175,7 +183,10 @@ nav:
       - 随笔记 | 2211-2212: ESSAY/Jottings/2211-2212.md
       #- 文章3:<相对路径>
     - 文章:
-      - 25考研回顾: ESSAY/Article/2024kaoyan.md
+      - 寻找人生的平衡点: ESSAY/Article/BalanceLife.md
+      - 选拔性考试的应对策略: ESSAY/Article/Exam-copingStrategies.md
+      - 烦恼倾诉: ESSAY/Article/Myworries.md
+      - 25考研回忆: ESSAY/Article/2024kaoyan.md
       - Shall we talk?: ESSAY/Article/Shall-we-talk.md
       - 浮躁时怎么办: ESSAY/Article/Address-Anxiety.md
       - 理想中的女生: ESSAY/Article/Ideal-girl.md
@@ -189,6 +200,7 @@ nav:
   - 阅读:
     - READ/index.md
     - 年度合集: 
+        - 2025: READ/YearlySet/2025.md
         - 2024: READ//YearlySet/2024.md
         - 2023: READ/YearlySet/2023.md
     - 特别摘录: 
@@ -214,32 +226,35 @@ nav:
     
     
 
-
 markdown_extensions:
-  - pymdownx.arithmatex: # latex支持
+  # [数学公式支持]
+  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
+  - pymdownx.arithmatex: 
       generic: true
-  - attr_list # 给图片后面添加{width="300"}设置大小
-  - pymdownx.emoji: # 使用emoji和icons
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # [图片功能支持]
+  # https://squidfunk.github.io/mkdocs-material/reference/images/
+  # 给 Markdown 图片语法后面添加 `{width="300"}` 设置大小
+  - attr_list
+  - md_in_html 
+
   - toc:
       permalink: true # 固定标题位置为当前位置
   - pymdownx.highlight: # 代码块高亮
       anchor_linenums: true
       # linenums: true # 显示行号
       # auto_title: true # 显示编程语言名称
-  - pymdownx.superfences # 代码块高亮插件
-  - abbr # 支持Markdown文件上方自定义标题标签等
-  - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
-  - pymdownx.details # admonition需要
-  - pymdownx.tabbed: # 实现在移动设备上更好的行为
-      alternate_style: true 
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  # [Markdown 提示]
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+  - admonition
+  - pymdownx.details
+  # [Markdown footnote 语法支持]
+  # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
+  - footnotes
 
-  # - pymdownx.critic # 下面这是文本高亮、下划线、删除线需要
-  - pymdownx.caret # https://squidfunk.github.io/mkdocs-material/reference/formatting/
-  # - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
+
 # [Extensions]
 plugins:
   - search:
