@@ -1,0 +1,7178 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="韬安的个人网站">
+      
+      
+        <meta name="author" content="王韬安">
+      
+      
+        <link rel="canonical" href="https://wang-taoan.github.io/BLOG/JAVA/01-object-oriented/">
+      
+      
+        <link rel="prev" href="../begin-java/">
+      
+      
+        <link rel="next" href="../02-object-oriented/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>「02」面向对象 - 韬安的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#02" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="https://wang-taoan.github.io/" title="韬安的个人网站" class="md-header__button md-logo" aria-label="韬安的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path d="M17.029 18.772l.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709-1.554-.777zm2.023-13.827v13.253l3.949-1.975V2.97l-3.949 1.975zM5.076 2.642L1.458 4.45 12.73 21.358l3.618-1.809L5.076 2.642z" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            韬安的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              「02」面向对象
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Wang-Taoan/Wang-Taoan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Wang-taoan.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../DEVELOPMENT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  开发
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../PLAN/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  规划
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../LIKETHINGS/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  生活
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ESSAY/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  随笔
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../READ/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  阅读
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../REPRINT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  转载
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ABOUT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  关于
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://wang-taoan.github.io/" title="韬安的个人网站" class="md-nav__button md-logo" aria-label="韬安的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path d="M17.029 18.772l.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709-1.554-.777zm2.023-13.827v13.253l3.949-1.975V2.97l-3.949 1.975zM5.076 2.642L1.458 4.45 12.73 21.358l3.618-1.809L5.076 2.642z" />
+</svg>
+
+    </a>
+    韬安的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Wang-Taoan/Wang-Taoan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Wang-taoan.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    博客
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            博客
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    C
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            C
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C/First-learnC1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    「01」笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C/First-learnC2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    「02」笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C/ignorantOfSyntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    不太明白的语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C/C%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    期末复习总结
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JAVA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            JAVA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../begin-java/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    「01」语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    「02」面向对象
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    「02」面向对象
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      类的基本格式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      类的补充知识
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基本语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      封装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privatepublic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Private和public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setget" class="md-nav__link">
+    <span class="md-ellipsis">
+      set和get方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#this" class="md-nav__link">
+    <span class="md-ellipsis">
+      this关键字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      构造方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javabean" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准的JavaBean
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      快捷键生成方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="快捷键生成方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ptg" class="md-nav__link">
+    <span class="md-ellipsis">
+      PTG插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      JAVA内存分配原理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      键盘录入
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="键盘录入">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      体系1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      体系2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="字符串">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    <span class="md-ellipsis">
+      String类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equals" class="md-nav__link">
+    <span class="md-ellipsis">
+      equals方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      遍历字符串
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringbulider" class="md-nav__link">
+    <span class="md-ellipsis">
+      StringBulider类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringjoiner" class="md-nav__link">
+    <span class="md-ellipsis">
+      StringJoiner类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何改变字符串的内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      集合ArrayList
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="集合ArrayList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      成员方法：增删改查
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      包装类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static" class="md-nav__link">
+    <span class="md-ellipsis">
+      static静态
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="static静态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      静态变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      静态方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extends" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承extends
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="继承extends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承中成员变量访问的特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法的重写
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承构造方法的访问特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thissuper" class="md-nav__link">
+    <span class="md-ellipsis">
+      this、super总结
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      cmd+p创建对象时提示参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      多态
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      多态调用成员的特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      多态的优势
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      多态的弊端
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      扩展的知识
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="扩展的知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final" class="md-nav__link">
+    <span class="md-ellipsis">
+      final
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      权限修饰符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码块（了解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      抽象类abstract
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      接口interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="接口interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      接口中成员的特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      接口和类的关系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opt" class="md-nav__link">
+    <span class="md-ellipsis">
+      opt+回车快速重写抽象类方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      写带方法体的方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      接口的应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      内部类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="内部类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      内部类的分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      匿名内部类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用的API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常用的API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Math
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biginteger" class="md-nav__link">
+    <span class="md-ellipsis">
+      bigInteger
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bigdecimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bigdecimal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      regex正则表达式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      爬虫
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      爬虫拓展
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      包装类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-object-oriented/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    「03」面向对象
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Java-hxj1-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Java核心技术卷I笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机体系结构
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            计算机体系结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerArchitecture/HDL%E4%B8%8B%E7%90%86%E8%A7%A3%E4%B8%80%E5%8F%B0Hack%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HDL下理解一台Hack计算机
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerArchitecture/HDL%E4%B8%8B%E7%90%86%E8%A7%A3%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84CPU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HDL下理解一个简易的CPU
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerArchitecture/HDL%E4%B8%8B%E7%90%86%E8%A7%A3%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84Memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HDL下理解一个简易的Memory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerArchitecture/HDL%E4%B8%8B%E7%90%86%E8%A7%A3RAM8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HDL下理解RAM8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerArchitecture/%E5%8C%BA%E5%88%86RAM%E5%92%8CROM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    区别RAM和ROM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerArchitecture/ROM32K%E7%9A%84%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROM32K的单位换算
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerArchitecture/Hack%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hack汇编语言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerArchitecture/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    计算机组成复习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机基础
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            计算机基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerFundamentals/fundamental/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    汇总
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机网络
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            计算机网络
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Summary-of-network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    网络知识点汇总
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Summary-of-calculation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    期末计算题汇总
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/xiaolincoding-note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    小林coding网络笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Markdown
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Markdown
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/name-regulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown文件命名规则
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Markdown/markdown-grammar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown使用语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    macOS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            macOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MacOS/Homebrew/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Homebrew
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MacOS/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    环境变量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MacOS/mac-imgs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    图片格式转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    生活中的计算机
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            生活中的计算机
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CsInTheLife/SSD-in-life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSD存储大小
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CsInTheLife/broadband/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    宽带速度
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CsInTheLife/characters-and-bytes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    字节和字符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CsInTheLife/HTTP-HTTPS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTP与HTTPS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    其他
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            其他
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Other/download-music/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    如何下载音乐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Other/%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%AB%E9%A2%98%E5%9E%8B%E6%80%BB%E7%BB%93/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    概率论期末总结
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../DEVELOPMENT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    开发
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            开发
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/interests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    开发兴趣
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    前端
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            前端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/Front-end/h5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    H5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/Front-end/css3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/Front-end/Vue2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/Front-end/elementecharts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    element+echarts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/Front-end/recordquestions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    开发问题记录
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    后端
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            后端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/Back-end/Spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/Back-end/MySQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MySQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/Back-end/ruoyi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ruoyi-vue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/Back-end/interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    interface
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    App
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            App
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/App/uniapp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    uni-app
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/App/Android/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Android
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DEVELOPMENT/Git/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../PLAN/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    规划
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            规划
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../LIKETHINGS/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    生活
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            生活
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    喜欢的
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            喜欢的
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/Like/Singer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    喜欢的歌手
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/Like/songs1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    「1」喜欢的歌
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/Like/songs2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    「2」喜欢的歌
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/Like/poems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    喜欢的诗
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    无畏契约
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            无畏契约
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/Valorant/guns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无畏契约 喜欢的枪皮
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Coc
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Coc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/Coc/CocTroop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coc 流派
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/Coc/CocSetting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coc 设置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    三国杀
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            三国杀
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/Sgs/%E4%B8%89%E5%9B%BD%E6%9D%80%E4%BA%BA%E7%89%A9%E5%8F%B0%E8%AF%8D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    三国杀 英雄台词
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LIKETHINGS/Sgs/sgsWays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    三国杀 获得道具途径
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../ESSAY/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    随笔
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            随笔
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    随笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            随笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2506/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2506
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2505/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2505
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2504/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2504
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/%E9%9A%8F%E7%AC%94%E5%89%8D%E8%A8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 前言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2409-2411/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2409-2411
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2407-2408/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2407-2408
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2405-2406/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2405-2406
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2403-2404/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2403-2404
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2401-2402/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2401-2402
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2311-2312/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2311-2312
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2309-2310/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2309-2310
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2307-2308/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2307-2308
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2305-2306/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2305-2306
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2303-2304/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2303-2304
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2301-2302/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2301-2302
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Jottings/2211-2212/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    随笔记 | 2211-2212
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    文章
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            文章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/BalanceLife/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    寻找人生的平衡点
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/Exam-copingStrategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    选拔性考试的应对策略
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/Myworries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    烦恼倾诉
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/2024kaoyan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    25考研回忆
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/Shall-we-talk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shall we talk?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/Address-Anxiety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    浮躁时怎么办
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/Ideal-girl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    理想中的女生
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/Selection-of-self-study-rooms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    学校自习室选择
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/pyq-self-confident/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    朋友圈自我和解
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/ChildhoodMemories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    童年和电脑的回忆
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/Thinking-about-Being-Alive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    对活着的思考
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/Sanbei-BarberShop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    我与三北理发店
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ESSAY/Article/writing-reading-blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    写博客和看博客之间的平衡
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../READ/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    阅读
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            阅读
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    年度合集
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            年度合集
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../READ/YearlySet/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../READ/YearlySet/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../READ/YearlySet/2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2023
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    特别摘录
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            特别摘录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../READ/SpecialCollection/%E3%80%8A%E5%B0%8F%E6%9E%97%E6%BC%AB%E7%94%BB%EF%BC%9A%E4%BA%BA%E9%97%B4%E7%83%9F%E7%81%AB%E6%B0%94%E3%80%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    《小林漫画：人间烟火气》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../READ/SpecialCollection/%E3%80%8A%E5%8F%B2%E8%92%82%E5%A4%AB%C2%B7%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E3%80%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    《史蒂夫·乔布斯传》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../READ/SpecialCollection/%E3%80%8A%E5%AF%8C%E7%88%B8%E7%88%B8%E7%A9%B7%E7%88%B8%E7%88%B8%E3%80%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    《富爸爸穷爸爸》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../READ/SpecialCollection/%E3%80%8A%E5%BE%B7%E7%B1%B3%E5%AE%89%EF%BC%9A%E5%BD%B7%E5%BE%A8%E5%B0%91%E5%B9%B4%E6%97%B6%E3%80%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    《德米安：彷徨少年时》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../READ/SpecialCollection/%E3%80%8A%E8%B5%B0%E5%88%B0%E4%BA%BA%E7%94%9F%E8%BE%B9%E4%B8%8A%E3%80%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    《走到人生边上:自问自答》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../READ/SpecialCollection/Inferiority-and-transcendence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    《自卑与超越》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../READ/SpecialCollection/bufuwoxin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    《不负我心》
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../REPRINT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    转载
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            转载
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../REPRINT/how-to-ask-questions-the-smart-way/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    提问的智慧
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../REPRINT/%E8%88%9E%E5%8F%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    演好自己的剧本
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../REPRINT/why-we-should-readbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    我们为什么要读书
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../REPRINT/live-in-the-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    生活在树上
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../REPRINT/wait/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    持续.....
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../ABOUT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    关于
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            关于
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/information/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    作者信息
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ABOUT/bulid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    网站构建
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      类的基本格式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      类的补充知识
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基本语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      封装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privatepublic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Private和public
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setget" class="md-nav__link">
+    <span class="md-ellipsis">
+      set和get方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#this" class="md-nav__link">
+    <span class="md-ellipsis">
+      this关键字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      构造方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javabean" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准的JavaBean
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      快捷键生成方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="快捷键生成方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ptg" class="md-nav__link">
+    <span class="md-ellipsis">
+      PTG插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      JAVA内存分配原理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      键盘录入
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="键盘录入">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      体系1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      体系2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="字符串">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    <span class="md-ellipsis">
+      String类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equals" class="md-nav__link">
+    <span class="md-ellipsis">
+      equals方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      遍历字符串
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringbulider" class="md-nav__link">
+    <span class="md-ellipsis">
+      StringBulider类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringjoiner" class="md-nav__link">
+    <span class="md-ellipsis">
+      StringJoiner类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何改变字符串的内容
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      集合ArrayList
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="集合ArrayList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      成员方法：增删改查
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      包装类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static" class="md-nav__link">
+    <span class="md-ellipsis">
+      static静态
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="static静态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      静态变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      静态方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extends" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承extends
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="继承extends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承中成员变量访问的特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法的重写
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承构造方法的访问特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thissuper" class="md-nav__link">
+    <span class="md-ellipsis">
+      this、super总结
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      cmd+p创建对象时提示参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      多态
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      多态调用成员的特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      多态的优势
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      多态的弊端
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      扩展的知识
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="扩展的知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final" class="md-nav__link">
+    <span class="md-ellipsis">
+      final
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      权限修饰符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码块（了解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      抽象类abstract
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      接口interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="接口interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      接口中成员的特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      接口和类的关系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opt" class="md-nav__link">
+    <span class="md-ellipsis">
+      opt+回车快速重写抽象类方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      写带方法体的方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      接口的应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      内部类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="内部类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      内部类的分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      匿名内部类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用的API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常用的API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Math
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biginteger" class="md-nav__link">
+    <span class="md-ellipsis">
+      bigInteger
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bigdecimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bigdecimal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      regex正则表达式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      爬虫
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      爬虫拓展
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      包装类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="02">「02」面向对象<a class="headerlink" href="#02" title="Permanent link">&para;</a></h1>
+<h2 id="_1">类<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">类的基本格式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>定义类-创建对象-使用对象</p>
+<p><img alt="img" src="../images/OO1.PNG" width="400" /></p>
+<h3 id="_3">类的补充知识<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>类的分类：</li>
+</ol>
+<p>javabean类：这个不写main</p>
+<p>测试类：写main</p>
+<ol>
+<li>类名的格式</li>
+</ol>
+<p>首字母大写，且见名知义</p>
+<ol>
+<li>
+<p>一个代码文件可以定义多个类，但是只能由一类是public修饰的，public修饰的名字必须是java代码的文件名称</p>
+</li>
+<li>
+<p>以后自己新建的类，可以作为一个新的数据类型来使用</p>
+</li>
+</ol>
+<blockquote>
+<p>比如新建了一个朋友类Friend</p>
+<p>可以用它来</p>
+<p>定义一个朋友类数组Friend arr=new Friend(3)；</p>
+<p>定义一个朋友类的变量Frined A；</p>
+</blockquote>
+<h2 id="_4">基本语法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">封装<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>定义：</p>
+<p>对象代表什么，就封装对应的数据，和行为。</p>
+<h3 id="privatepublic">Private和public<a class="headerlink" href="#privatepublic" title="Permanent link">&para;</a></h3>
+<p><strong>private修饰的成员只能在本类中访问</strong></p>
+<h3 id="setget">set和get方法<a class="headerlink" href="#setget" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Set：给成员变量赋值</li>
+<li>Get：对外提供成员的变量</li>
+</ul>
+<h3 id="this">this关键字<a class="headerlink" href="#this" title="Permanent link">&para;</a></h3>
+<p>成员变量和局部变量</p>
+<p>它们满足的是<strong><em>就近原则</em></strong></p>
+<p>解决方法：<code>this关键字</code></p>
+<p>就可以区分成员变量和局部变量</p>
+<h3 id="_6">构造方法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>定义：创建对象的时候，给成员变量赋值初始化用的</p>
+<blockquote>
+<p><strong>注意它们的特点</strong></p>
+</blockquote>
+<ul>
+<li>推荐书写：都写空参构造与带全部参数构造的方法</li>
+</ul>
+<h3 id="javabean">标准的JavaBean<a class="headerlink" href="#javabean" title="Permanent link">&para;</a></h3>
+<p>代表标准</p>
+<p><img alt="img" src="../images/OO2.png" width="500" /></p>
+<h2 id="_7">快捷键生成方法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ol>
+<li><code>cmd+N</code>生成构造方法</li>
+</ol>
+<p>win是<code>alt+insert</code></p>
+<p>或者<code>alt+Fn+insert</code></p>
+<ol>
+<li><code>cmd+opt+m抽取方法</code></li>
+<li><code>格式化代码cmd+opt+L</code></li>
+<li><code>创建对象提示参数cmd+p</code></li>
+<li><code>cmd+opt+v</code>自动补全左侧声明变量代码win中是<code>ctr+alt+v</code></li>
+<li>快速调出系统的报错解决方法<code>opt+回车</code></li>
+</ol>
+<h3 id="ptg">PTG插件<a class="headerlink" href="#ptg" title="Permanent link">&para;</a></h3>
+<p><code>ptg</code>快速生成javaBean</p>
+<p>使用方法：右键空白处选择javabean字样的</p>
+<h2 id="java">JAVA内存分配原理<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
+<ul>
+<li>方法区</li>
+</ul>
+<p>.class文件</p>
+<ul>
+<li>栈内存</li>
+</ul>
+<p>放main方法</p>
+<p>放对象的方法</p>
+<p>一个new对象，其实在栈内存中是一个地址值</p>
+<ul>
+<li>堆内存</li>
+</ul>
+<p>new、地址</p>
+<p><img alt="img" src="../images/OO3.png" width="500" /></p>
+<h2 id="_8">键盘录入<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="1">体系1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nextInt()
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>nextdouble()
+</code></pre></div>
+<p><code>next()</code>接受字符串</p>
+<p><strong><em>遇到空格-制表符-回车就停止接收</em></strong></p>
+<h3 id="2">体系2<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nextLine()
+</code></pre></div>
+<p>可以接受空格-制表符，<strong><em>但是遇到回车才停止接受数据</em></strong></p>
+<p>（俩个体系不能混用）</p>
+<h2 id="_9">数组<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li>数组里面如果有一个空间是空的话，里面装的是null；</li>
+</ul>
+<h3 id="array">Array类<a class="headerlink" href="#array" title="Permanent link">&para;</a></h3>
+<p>好用的静态方法：</p>
+<ul>
+<li>1.<code>.toString</code>数组输出字符串</li>
+</ul>
+<blockquote>
+<p>例如：int []arr={1,2,3,4,5,7}</p>
+<p>Array.toString(arr)</p>
+<p>输出[1,2,3,4,5,7]</p>
+<p>带中括号和逗号的输出</p>
+</blockquote>
+<ul>
+<li>2.<code>.sort</code></li>
+</ul>
+<p>按照升序排序数组</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>（数组名）
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>(数组名,起始索引,终止索引)
+</code></pre></div>
+<p><strong><em>返回的是数组</em></strong></p>
+<ul>
+<li>\3. 数组的比较</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>public static boolean equals(Object[] a, `` ``Object[] a2)
+</code></pre></div>
+<ul>
+<li>4.查找数组中的元素的下标</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>binarySearch()
+</code></pre></div>
+<h2 id="_10">字符串<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>字符串是引用数据类型，里面是一个地址值</p>
+<h3 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
+<p>JDK中提供的各种功能的java类</p>
+<p>就是别人已经写好的，只要学习如何使用就可以了</p>
+<ul>
+<li>API帮助文档的使用</li>
+</ul>
+<h3 id="string">String类<a class="headerlink" href="#string" title="Permanent link">&para;</a></h3>
+<p>在java.lang包里</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>java.lang.String
+</code></pre></div>
+<h3 id="equals">equals方法<a class="headerlink" href="#equals" title="Permanent link">&para;</a></h3>
+<ul>
+<li>方法<code>equals</code>判断字符串是不是相等</li>
+<li><code>equlasignoreCase</code>（忽略大小写）</li>
+</ul>
+<p>返回的是一个boolean</p>
+<p>例子：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Boolean result = S1.equals(S2);
+</code></pre></div>
+<h3 id="_11">遍历字符串<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>方法一：<code>.charat(索引)</code>根据索引，求字符串中的字符</li>
+<li>方法二：<code>.length()</code>求字符串的长度</li>
+</ul>
+<blockquote>
+<p>Tips：区别与求数组长度,数组是.length</p>
+<p>区别在于有没有（）</p>
+</blockquote>
+<ul>
+<li>快捷键<code>Str.length().fori</code> 快速生成for循环，次数是字符串内字符的个数</li>
+</ul>
+<h3 id="stringbulider">StringBulider类<a class="headerlink" href="#stringbulider" title="Permanent link">&para;</a></h3>
+<ul>
+<li>含义：是一个可以包容所有类型的容器</li>
+</ul>
+<blockquote>
+<p>这个容器不是String类！不是字符串</p>
+</blockquote>
+<ul>
+<li>成员方法：</li>
+</ul>
+<p>1.添加类型<code>append（任意类型）</code></p>
+<p>2.反转内容<code>reverse（）</code></p>
+<p>3.返回长度<code>length（）</code></p>
+<p>4.转换成字符串 <code>toString（）</code></p>
+<ul>
+<li>使用场景：</li>
+</ul>
+<p>1.字符串的<strong><em>拼接</em></strong></p>
+<p>2.字符串的<strong><em>反转</em></strong></p>
+<h3 id="stringjoiner">StringJoiner类<a class="headerlink" href="#stringjoiner" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>含义：也是个容器</p>
+</li>
+<li>
+<p>构造方法</p>
+</li>
+</ul>
+<p>1.<code>StringJoiner（间隔符号，开始符号，结束符号）</code></p>
+<p>\2. <code>StringJoiner（间隔符号）</code></p>
+<ul>
+<li>成员方法</li>
+</ul>
+<p>1.<code>add（添加内容）</code></p>
+<p>2.<code>length（）</code></p>
+<p>3.<code>toString（）</code></p>
+<ul>
+<li>应用场景：高效拼接字符串</li>
+</ul>
+<blockquote>
+<p>如果有变量参与的字符串拼接，会在内存中，浪费很多内存</p>
+<p>例如：String X = X+"1231231"</p>
+<p>如何解决：</p>
+<p>用StringBuilder或者Stringjoiner</p>
+</blockquote>
+<h3 id="_12">如何改变字符串的内容<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>1.用<code>subString</code>方法来截取，再来拼接</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>subString(开始索引，长度)
+</code></pre></div>
+<ul>
+<li>2.把字符串变成<strong><em>字符数组</em></strong></li>
+</ul>
+<p>方法<code>.toCharArray();</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>char[] arr = str.toCharArray();
+</code></pre></div>
+<p>调整字符数组里面的数据，最后把字符数组变成字符串 </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>String result = new String（arr）
+</code></pre></div>
+<h2 id="arraylist">集合ArrayList<a class="headerlink" href="#arraylist" title="Permanent link">&para;</a></h2>
+<ul>
+<li>特点</li>
+</ul>
+<p>1.可以自动扩容</p>
+<p>2.存储类型只能是引用数据类型</p>
+<ul>
+<li>格式：</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ArrayList&lt;数据类型的包装类&gt;list = new ArrayList&lt;&gt;();
+</code></pre></div>
+<h3 id="_13">成员方法：增删改查<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>1.添加<code>add</code></p>
+<p>2.删除<code>remove</code></p>
+<p>可以根据索引删除，或者根据内容删除</p>
+<p>3.修改</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Set（索引，内容）
+</code></pre></div>
+<p>返回的是被覆盖的原元素</p>
+<p>4.查询</p>
+<p><code>get（索引）</code>查询</p>
+<p><code>size（）</code>获得长度</p>
+<h3 id="_14">包装类<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>问题引入：如果想要在集合中存数字怎么办？</p>
+</li>
+<li>
+<p>解决：使用<code>包装类</code></p>
+</li>
+</ul>
+<p><img alt="img" src="../images/OO4.png" width="300" /></p>
+<h2 id="static">static静态<a class="headerlink" href="#static" title="Permanent link">&para;</a></h2>
+<h3 id="_15">静态变量<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>含义：就是所有该类创建的对象，<strong><em>共享</em></strong>这个变量。</li>
+<li>例如：多个学生共享一个老师</li>
+<li>调用方法：</li>
+</ul>
+<p>1.用类名调用（推荐）</p>
+<p>2.用对象名调用</p>
+<h3 id="_16">静态方法<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>应用场景：多用来测试类和<strong><em>工具类</em></strong>中。</p>
+<ul>
+<li>工具类</li>
+</ul>
+<p>1.要<strong>私有化</strong>构造方法<code>private</code></p>
+<p>目的：不让外界创建它的对象</p>
+<p>2.静态方法构建</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>public static
+</code></pre></div>
+<h3 id="_17">注意事项<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>1.静态方法内不能访问非静态的方法</p>
+<p>2.静态方法内没有this关键字</p>
+<p>3.非静态方法可以访问所有</p>
+<h2 id="extends">继承extends<a class="headerlink" href="#extends" title="Permanent link">&para;</a></h2>
+<p>格式：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Public class子类extends父类{ }
+</code></pre></div>
+<p>特点</p>
+<ul>
+<li>Java只支持单继承，</li>
+<li>不支持多继承，</li>
+<li>但支持多层继承</li>
+</ul>
+<blockquote>
+<p>每一个类都直接或间接继承Object类</p>
+</blockquote>
+<p>内容：</p>
+<p>子类能继承父类中哪些内容？</p>
+<p><img alt="img" src="../images/OO5.png" width="500" /></p>
+<blockquote>
+<p>.class是叫字节码文件</p>
+<p>虚方法表</p>
+<p>非private</p>
+<p>非static</p>
+<p>非final</p>
+</blockquote>
+<h3 id="_18">继承中成员变量访问的特点<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>就近原则</p>
+<ul>
+<li>重名解决方法：</li>
+</ul>
+<p>This用本类的</p>
+<p>super用父类的</p>
+<h3 id="_19">方法的重写<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>当父类的方法不能满足子类现在的需求时候，需要进行方法重写</p>
+<p><code>@Override</code>重写注解</p>
+<p>需要在重写方法的头上加上@Override</p>
+<p>建议写上</p>
+<p><strong><em>重写的方法尽量和父类保持一致</em></strong></p>
+<h3 id="_20">继承构造方法的访问特点<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>父类的构造方法不会被子类继承</strong></li>
+</ul>
+<p>意思就是子类要重新写构造方法！</p>
+<p>但可以用<code>super</code>调用</p>
+<ul>
+<li>怎么调用父类构造方法？</li>
+</ul>
+<p>第一行写super（）</p>
+<p>意思是默认调用父类的无参构造。</p>
+<blockquote>
+<p>不写super（）也存在</p>
+</blockquote>
+<p>有参构造要手动写super（参数1，参数2）</p>
+<h3 id="thissuper">this、super总结<a class="headerlink" href="#thissuper" title="Permanent link">&para;</a></h3>
+<p><img alt="img" src="../images/OO6.png" width="500" /></p>
+<blockquote>
+<p>This：理解为一个变量，表示当前方法调用者的地址值</p>
+<p>super:代表父类存储空间</p>
+</blockquote>
+<h3 id="cmdp">cmd+p创建对象时提示参数<a class="headerlink" href="#cmdp" title="Permanent link">&para;</a></h3>
+<p>创建对象，如果忘记了参数可以<code>cmd+p</code>提示参数</p>
+<h2 id="_21">多态<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<h3 id="_22">概念<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>多态：对象的多种形态</li>
+<li>格式：</li>
+</ul>
+<p>把子类对象赋值给父类</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>父类类型 名称 = 子类对象
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>例如：person p = new student()
+</code></pre></div>
+<ul>
+<li>前提：</li>
+</ul>
+<p>1.有继承或者实现关系</p>
+<p>2.有方法重写</p>
+<ul>
+<li>好处：</li>
+</ul>
+<p>使用父类类型作为方法的参数，可以<em>接收所有子类对象</em>，体现多态的拓展性和便利</p>
+<h3 id="_23">多态调用成员的特点<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Fu f= new zi();
+</code></pre></div>
+<ul>
+<li>
+<p>变量调用：编译看左边的父类Fu，运行也看左边Fu</p>
+</li>
+<li>
+<p>方法调用：编译看左边Fu，运行看右边的子类zi</p>
+</li>
+</ul>
+<blockquote>
+<p>简单的说：就是f可以调用子类中重写的方法。</p>
+</blockquote>
+<h3 id="_24">多态的优势<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p>1.多态下，右边对象可以实现解耦合，便于扩展和维护</p>
+<p>2.定义方法的时候，使用父类作为参数，可以接受所有子类对象，体现了多态的便利性（重要）</p>
+<p>如object</p>
+<h3 id="_25">多态的弊端<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p><strong><em>不能调用子类中的特有方法！</em></strong></p>
+<blockquote>
+<p>解决弊端的方案：</p>
+<p>用强制转换变回子类类型</p>
+<p>Person p = new student()</p>
+<p>Student s = (Student) p;</p>
+<p>如果转换类型和真实对象类型不一致回报错，</p>
+<p>转换的时候用<strong><em>instanceof</em></strong>关键字进行判断，这个多态是不是自己想要的对象类型</p>
+<p>A instanceof Student b</p>
+</blockquote>
+<h2 id="_26">扩展的知识<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h2>
+<h3 id="_27">包<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>定义：</li>
+</ul>
+<p>就是文件夹。</p>
+<p>用来管理各种不同功能的java类，方便后期代码维护。</p>
+<ul>
+<li>包名的书写规则</li>
+</ul>
+<p>公司域名反写+包的作用，全部英文小写，见名知意</p>
+<ul>
+<li>使用其他类的规则</li>
+</ul>
+<p>用<code>import导包</code></p>
+<p>1.使用同一个包中的类时，不需要导包</p>
+<p>2.使用java.lang不需要导包</p>
+<blockquote>
+<p>这个是java自带的官方包，里面有例如String类</p>
+</blockquote>
+<p>3.如果同时使用俩个包中的同名类，需要使用全类名</p>
+<blockquote>
+<p>全类名：包名+类名</p>
+</blockquote>
+<h3 id="final">final<a class="headerlink" href="#final" title="Permanent link">&para;</a></h3>
+<p><img alt="img" src="../images/OO7.png" width="500" /></p>
+<blockquote>
+<p>修饰方法、类了解一下就可以</p>
+</blockquote>
+<ul>
+<li>适用场景</li>
+</ul>
+<p>常用的final修饰的变量叫作常量，只能被赋值一次。</p>
+<p>可以增强代码的可读性。</p>
+<blockquote>
+<p>常量命名</p>
+<p>单个单词：全部大写</p>
+<p>多个单词：全部大写，单词与单词用下划线分开</p>
+<p>例如：DELETE_STUDENT</p>
+</blockquote>
+<h3 id="_28">权限修饰符<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<p>控制一个成员能被访问的范围</p>
+<p>可以修饰成员变量、方法、构造方法</p>
+<p>私有<code>Private</code></p>
+<p>默认 <code>protected</code></p>
+<p>公共<code>public</code></p>
+<blockquote>
+<p>就掌握俩个常用的就好了</p>
+</blockquote>
+<h3 id="_29">代码块（了解<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<p>局部代码块</p>
+<p>构造代码块</p>
+<p>静态代码块</p>
+<h3 id="abstract">抽象类abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
+<ul>
+<li>作用：</li>
+</ul>
+<p>在抽取共性的时候，<strong><em>无法确定方法体</em></strong>，就把方法体定义为抽象的。</p>
+<ul>
+<li>抽象方法：</li>
+</ul>
+<p>共性的方法抽取到父类中，每个子类中执行的内容是不一样的，所以在父类中不能确定具体的方法，该方法可以定义为抽象方法。</p>
+<ul>
+<li>格式</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Public abstract 返回类型 方法名()
+</code></pre></div>
+<blockquote>
+<p>例如：public abstract void eat();</p>
+</blockquote>
+<ul>
+<li>
+<p>注意事项</p>
+</li>
+<li>
+<p><strong>抽象类不能创建对象</strong></p>
+</li>
+<li>抽象类中不一定有抽象方法，有抽象方法的类一定是抽象类</li>
+<li>抽象类一般都是父类</li>
+<li><strong>创建子类继承父类的时候，因为父类是抽象类，所以一定要重写抽象方法！！！！！</strong></li>
+<li>
+<p>抽象类没有方法体</p>
+</li>
+<li>
+<p>意义：</p>
+</li>
+</ul>
+<p>多人合作写代码的时候，统一方法名</p>
+<p>强制子类必须按照这种格式进行重写代码</p>
+<h3 id="interface">接口interface<a class="headerlink" href="#interface" title="Permanent link">&para;</a></h3>
+<ul>
+<li>接口的定义和使用</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Public interface 接口名 {}
+</code></pre></div>
+<ul>
+<li>接口和类之间是实现关系</li>
+</ul>
+<p>用<code>implements</code>关键字</p>
+<p>例如：<code>public class XXX implements 接口名</code></p>
+<p>要完成实现，需要在类中重写所有抽象方法</p>
+<blockquote>
+<p>接口要单独创建一个interface</p>
+<p><strong><em>接口里面用抽象方法</em></strong>，便于统一代码格式</p>
+</blockquote>
+<h4 id="_30">接口中成员的特点<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<ul>
+<li>成员变量：只能是常量</li>
+</ul>
+<blockquote>
+<p>默认修饰符<strong><em>public static final</em></strong></p>
+</blockquote>
+<ul>
+<li>
+<p>构造方法：没有</p>
+</li>
+<li>
+<p>成员方法：只能是抽象方法</p>
+</li>
+</ul>
+<blockquote>
+<p>默认修饰符<strong><em>public abstract</em></strong></p>
+</blockquote>
+<h4 id="_31">接口和类的关系<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
+<ul>
+<li>接口和类之间是实现关系</li>
+<li>类和类之间是继承关系</li>
+<li>接口和接口之间是继承关系</li>
+</ul>
+<h4 id="opt">opt+回车快速重写抽象类方法<a class="headerlink" href="#opt" title="Permanent link">&para;</a></h4>
+<h4 id="_32">写带方法体的方法<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
+<p>1.默认方法</p>
+<p>关键字<code>default</code></p>
+<p><strong>这是一个不强制重写的方法</strong></p>
+<p><strong>它的出现是为了解决规则多变的情况，防止已经写好的实现接口报错</strong></p>
+<blockquote>
+<p>在实现接口的时候：</p>
+<p>默认方法可以重写，也可以不重写</p>
+</blockquote>
+<p>2.静态方法</p>
+<p>静态方法不能重写</p>
+<p>调用的时候要用<code>接口名.静态方法</code></p>
+<p>3.私有方法</p>
+<p>简化接口内方法的代码用</p>
+<h4 id="_33">接口的应用<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
+<ul>
+<li>1.行为的规则，是行为抽象。</li>
+</ul>
+<p>想要哪个类拥有这个行为，就实现这个接口就可以了</p>
+<ul>
+<li>2.接口多态</li>
+</ul>
+<p>当一个方法的参数是接口时候，可以传递接口所有实现类的对象。</p>
+<h3 id="_34">内部类<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>含义：在A类的内部定义B类，B类就被称为内部类</p>
+</li>
+<li>
+<p>为什么要学习内部类</p>
+</li>
+<li>
+<p>内部类表示的事物是外部类的一部分</p>
+</li>
+<li>
+<p>内部类单独出现是没有任何意义的</p>
+</li>
+<li>
+<p>内部类访问的特点</p>
+</li>
+<li>
+<p>内部类可以直接访问外部类的成员，包括私有 </p>
+</li>
+<li>
+<p>外部类要访问内部类的成员，<strong><em>必须创建对象</em></strong></p>
+</li>
+</ul>
+<h4 id="_35">内部类的分类<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
+<ul>
+<li>成员内部类</li>
+</ul>
+<p>写在成员位置的，属于外部类的成员</p>
+<ul>
+<li>静态内部类</li>
+<li>局部内部类</li>
+</ul>
+<p>（以上了解就可以了）</p>
+<ul>
+<li>&amp;匿名内部类（掌握）</li>
+</ul>
+<h4 id="_36">匿名内部类<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h4>
+<ul>
+<li>包含：实现/继承、方法重写、创建对象</li>
+<li>格式：</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">格式</span><span class="err">：</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w"> </span><span class="n">New</span><span class="w"> </span><span class="n">类</span><span class="o">/</span><span class="n">接口</span><span class="err">（）</span><span class="p">{</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">                </span><span class="n">重写方法</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">};</span>
+</code></pre></div>
+<ul>
+<li>使用场景：</li>
+</ul>
+<p>当方法的参数是接口或者类时，</p>
+<p>如果是接口，就可以传递这个接口的<strong><em>实现类对象</em></strong>，</p>
+<p><em>如果实现类只要使用一次，就可以用匿名内部类简化代码</em></p>
+<p><img alt="img" src="../images/OO8.png" width="400" /></p>
+<h2 id="api_1">常用的API<a class="headerlink" href="#api_1" title="Permanent link">&para;</a></h2>
+<p>API用很多方法</p>
+<p>（不用记方法</p>
+<p>记一下类名字和类的作用就可以了</p>
+<p>养成查阅<a href="https://www.runoob.com/manual/jdk11api/index.html">API帮助文档</a>的习惯</p>
+<blockquote>
+<p>Java.lang是java的核心包</p>
+</blockquote>
+<h3 id="math">Math<a class="headerlink" href="#math" title="Permanent link">&para;</a></h3>
+<p>里面的方法都是静态的。用类名调用方法就可以了</p>
+<h3 id="system">System<a class="headerlink" href="#system" title="Permanent link">&para;</a></h3>
+<p>与系统有关</p>
+<p>几个常用的方法</p>
+<ul>
+<li><code>exit</code>终止Java虚拟机</li>
+<li><code>currentTimeMilleis</code>返回当前系统的时间毫秒值（可以用来判断哪个代码运行效率更高）1秒=1000毫秒</li>
+<li><code>arraycopy</code>拷贝数组</li>
+</ul>
+<h3 id="runtime">Runtime<a class="headerlink" href="#runtime" title="Permanent link">&para;</a></h3>
+<p>查询底层内存有关的类</p>
+<h3 id="object">Object<a class="headerlink" href="#object" title="Permanent link">&para;</a></h3>
+<p>和地址有关的</p>
+<ol>
+<li><code>toString</code></li>
+</ol>
+<p>默认返回的是当前对象地址</p>
+<blockquote>
+<p>直接sout（a）也可以输出对象地址.</p>
+<p><strong><em>当重写了toString之后，sout（a）是直接打印的是这个对象的属性值</em></strong></p>
+</blockquote>
+<p>存在的意义：</p>
+<p>为了被子类重写方法，输出有用的内容</p>
+<blockquote>
+<p>如果我们想要输出对象的属性，可以重写toString方法就可以了</p>
+<p>可以用cmd+n快速写toString</p>
+</blockquote>
+<ol>
+<li><code>equlas</code></li>
+</ol>
+<p>默认比较的两个对象的地址，返回的是布尔类型的</p>
+<ul>
+<li>意义：为了被子类重写方法，比较有用的内容</li>
+</ul>
+<p>cmd+N官方写的equals是用来比较每一个属性</p>
+<ol>
+<li>clone</li>
+</ol>
+<p><strong>要默认重写方法</strong></p>
+<blockquote>
+<p>浅克隆（完全拷贝</p>
+<p>深克隆（引用数据类型会重新创建一个新数组）（如果要用需要重写方法或者用第三方</p>
+</blockquote>
+<h3 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">&para;</a></h3>
+<ol>
+<li><code>equlas</code></li>
+</ol>
+<p>这个方法更加安全</p>
+<blockquote>
+<p>因为传统的equals内传递的参数必须不能为null，容易出现异常</p>
+</blockquote>
+<p>Objects.equlas的里面可以写null</p>
+<p><strong>所以对象进行内容比较多时候建议使用Objects.equlas</strong></p>
+<ol>
+<li><code>isNull</code></li>
+</ol>
+<p>isNull方法判断是不是null</p>
+<p>是null就返回true</p>
+<h3 id="biginteger">bigInteger<a class="headerlink" href="#biginteger" title="Permanent link">&para;</a></h3>
+<p>大整数，基本没有上限</p>
+<ul>
+<li>
+<p>构造方法</p>
+</li>
+<li>
+<p><code>Biginteger(int num, Random and)</code>获得【0-2的num次-1】的随机数</p>
+</li>
+<li><code>biginteger(String val)</code>获得指定的大整数（不能写小数….</li>
+</ul>
+<blockquote>
+<p>比较常用</p>
+</blockquote>
+<ol>
+<li>
+<p><code>valueof(Long a)</code>静态构造方法。如：biginteger b1 = biginteger.valueof(12345);</p>
+</li>
+<li>
+<p>成员方法</p>
+</li>
+</ol>
+<p>加减乘除幂余数max min equlas</p>
+<p>转成整数intValue、longValue</p>
+<h3 id="bigdecimal">Bigdecimal<a class="headerlink" href="#bigdecimal" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>较大的小数精确计算有关的类</strong></p>
+</li>
+<li>
+<p>建议使用的构造方法</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>bigdecimal(String aa)
+</code></pre></div>
+<p>静态方法构造对象</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Bigdecimal.valueof
+</code></pre></div>
+<ol>
+<li>成员方法：</li>
+</ol>
+<p>加减乘除</p>
+<p>除法divide（舍入模式</p>
+<h3 id="regex">regex正则表达式<a class="headerlink" href="#regex" title="Permanent link">&para;</a></h3>
+<p>作用：</p>
+<ol>
+<li>检验字符串是否满足规则</li>
+<li>在一段文本中找符合要求的内容</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>字符串.matches(regex)
+</code></pre></div>
+<ul>
+<li>字符类规则：</li>
+</ul>
+<p>[ ]</p>
+<p>^</p>
+<p>-</p>
+<p>&amp;&amp;交集</p>
+<ul>
+<li>预定义字符规则</li>
+</ul>
+<p>. \s \d \w</p>
+<blockquote>
+<p>在JAVA中俩个\表示一个\</p>
+<p>例如\w</p>
+</blockquote>
+<ul>
+<li>数量词规则（校验多个字符时</li>
+</ul>
+<blockquote>
+<p>在API中搜pattern可以查询</p>
+</blockquote>
+<p><img alt="img" src="../images/OO9.png" width="450" /></p>
+<ul>
+<li>总结</li>
+</ul>
+<p><img alt="img" src="../images/OO10.png" width="450" /></p>
+<p><img alt="img" src="../images/OO11.png" width="450" /></p>
+<h3 id="_37">爬虫<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>regex的拓展使用：在一段文本中找要求的内容，比如在本地文本找爬取身份证号、手机号</p>
+</blockquote>
+<p><strong>Pattern 表示正则表达式</strong></p>
+<p><strong>Matcher文本匹配器</strong></p>
+<ol>
+<li>获得正则表达式的对象</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Pattern p = pattern.compile(regex)
+</code></pre></div>
+<ol>
+<li>获得文本匹配器的对象</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Matcher m = p.matcher(str)
+</code></pre></div>
+<blockquote>
+<p>m是对象，p是规则，str字符串。这里调用了正则表达式的成员方法，它返回的是一个文本匹配器对象</p>
+</blockquote>
+<ol>
+<li>爬取数据</li>
+</ol>
+<p><code>m.find()</code>从头开始读取数据，寻找满足规则的子串，找到了就返回的是true</p>
+<blockquote>
+<p>内部还记录了子串的起始索引和结束索引</p>
+</blockquote>
+<ol>
+<li>读取数据</li>
+</ol>
+<p><code>m.group()</code>利用find记录的索引来读取字符串，返回的是字符串String</p>
+<ol>
+<li>完成无限循环需要用while（m.find())</li>
+</ol>
+<p>总结：</p>
+<p><strong>（总体格式比较固定）</strong></p>
+<h3 id="_38">爬虫拓展<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<p>有条件的爬取数据</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>regex=java(?`**`=`**`8|11|18)
+</code></pre></div>
+<blockquote>
+<p>（其中？表示前面的java</p>
+<p>表示爬取版本号为8，11，18的java文本，但是只要java，不显示版本号</p>
+<p>就当作是java=8｜11｜18</p>
+</blockquote>
+<p>不显示这些版本号就是<code>=</code></p>
+<p>如果要显示版本号就是<code>：</code></p>
+<p>不要这些版本号的话就是<code>！</code></p>
+<ul>
+<li>贪婪爬取，非贪婪爬取</li>
+</ul>
+<p>贪婪：尽可能多的获取数据</p>
+<blockquote>
+<p>Java默认就是贪婪爬取</p>
+</blockquote>
+<ol>
+<li>贪婪：就是加个数量词+或者*</li>
+<li>非贪婪：后面多加个？如</li>
+</ol>
+<p>*？+？</p>
+<blockquote>
+<p>例子：贪婪ab+，非贪婪ab+？</p>
+</blockquote>
+<ul>
+<li>字符串中有关正则表达式的成员方法</li>
+</ul>
+<p>replaceAll</p>
+<p>Split切割</p>
+<ul>
+<li>捕获分组、非捕获分组</li>
+</ul>
+<h3 id="_39">时间类<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><code>Date类</code></p>
+</li>
+<li>
+<p>创建日期的对象</p>
+</li>
+</ol>
+<p><code>Date（）</code>表示当前时间</p>
+<blockquote>
+<p>从1970年开始的</p>
+</blockquote>
+<p><code>Date（long date）</code>表示指定时间（里面参数date表示毫秒值</p>
+<ul>
+<li>修改对象中的毫秒值</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>setTime
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>getTime
+</code></pre></div>
+<ol>
+<li><code>SimpleDateFormat</code></li>
+</ol>
+<p>2个作用</p>
+<p>1 自己想要的格式化日期</p>
+<p>2 解析：把字符串-》日期</p>
+<p>方法：</p>
+<p><code>format（date）</code> 格式化日期</p>
+<p>例如：把xx/xx/xx格式化成</p>
+<p>xx年xx月xx日</p>
+<p>返回的是字符串类</p>
+<p><code>Parse</code>  解析字符串-〉日期</p>
+<p>返回的是date类</p>
+<ol>
+<li>
+<p><code>Calendar</code></p>
+</li>
+<li>
+<p>获得对象要用静态方法</p>
+</li>
+</ol>
+<p>getInstance</p>
+<ul>
+<li>常见方法</li>
+</ul>
+<p>修改、获取、增加</p>
+<ol>
+<li>JDK8新增时间相关类</li>
+</ol>
+<p>代码变得简单了</p>
+<p>判断时间大小的方法</p>
+<p>计算时间间隔的方法</p>
+<blockquote>
+<p>1L是指1秒</p>
+</blockquote>
+<h3 id="_40">包装类<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<p>含义：基本数据类型对应的引用类型</p>
+<blockquote>
+<p>八种基本数据类型都有包装类</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>int————Integer
+</code></pre></div>
+<blockquote>
+<p>有自动装箱和拆箱，就是可以不用new integer，可以直接 integer i1 = 10；</p>
+<p>可以把integer直接当作int 用，加减乘除都不用调用方法</p>
+</blockquote>
+<p>Integer 有转换成2 8 16进制的方法</p>
+<p>还有字符串转换成int 方法</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>parseInt
+</code></pre></div>
+<blockquote>
+<p>java是强类型语言，就是不是同一种数据类型，是无法计算的。</p>
+<p>以后想要键盘录入，不管是什么类型的统一使用<code>nextLine</code></p>
+<p>特点是遇到回车才停止，其他的遇到空格制表符就会停止。</p>
+</blockquote>
+<p>如果想要int类型的话，就用<code>Integer.parseInt(String xx)</code>来进行类型转换</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../begin-java/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 「01」语法">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                「01」语法
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02-object-oriented/" class="md-footer__link md-footer__link--next" aria-label="下一页: 「03」面向对象">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                「03」面向对象
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2023-2025 王韬安
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/506537329?spm_id_from=333.337.0.0" target="_blank" rel="noopener" title="Bilibili丨勇敢的湍流" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0q13.2 0 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0q13.2 0 21.9 8.603c5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.xiaohongshu.com/user/profile/5be67469c6138500017451d4" target="_blank" rel="noopener" title="小红书丨Santiago" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.405 9.879c.002.016.01.02.07.019h.725a.797.797 0 0 0 .78-.972.794.794 0 0 0-.884-.618.795.795 0 0 0-.692.794c0 .101-.002.666.001.777m-11.509 4.808c-.203.001-1.353.004-1.685.003a2.5 2.5 0 0 1-.766-.126.025.025 0 0 0-.03.014L7.7 16.127a.025.025 0 0 0 .01.032c.111.06.336.124.495.124.66.01 1.32.002 1.981 0q.017 0 .023-.015l.712-1.545a.025.025 0 0 0-.024-.036zM.477 9.91c-.071 0-.076.002-.076.01l-.01.08c-.027.397-.038.495-.234 3.06-.012.24-.034.389-.135.607-.026.057-.033.042.003.112.046.092.681 1.523.787 1.74.008.015.011.02.017.02.008 0 .033-.026.047-.044q.219-.282.371-.606c.306-.635.44-1.325.486-1.706.014-.11.021-.22.03-.33l.204-2.616.022-.293c.003-.029 0-.033-.03-.034zm7.203 3.757a1.4 1.4 0 0 1-.135-.607c-.004-.084-.031-.39-.235-3.06a.4.4 0 0 0-.01-.082c-.004-.011-.052-.008-.076-.008h-1.48c-.03.001-.034.005-.03.034l.021.293q.114 1.473.233 2.946c.05.4.186 1.085.487 1.706.103.215.223.419.37.606.015.018.037.051.048.049.02-.003.742-1.642.804-1.765.036-.07.03-.055.003-.112m3.861-.913h-.872a.126.126 0 0 1-.116-.178l1.178-2.625a.025.025 0 0 0-.023-.035l-1.318-.003a.148.148 0 0 1-.135-.21l.876-1.954a.025.025 0 0 0-.023-.035h-1.56q-.017 0-.024.015l-.926 2.068c-.085.169-.314.634-.399.938a.5.5 0 0 0-.02.191.46.46 0 0 0 .23.378 1 1 0 0 0 .46.119h.59c.041 0-.688 1.482-.834 1.972a.5.5 0 0 0-.023.172.47.47 0 0 0 .23.398c.15.092.342.12.475.12l1.66-.001q.017 0 .023-.015l.575-1.28a.025.025 0 0 0-.024-.035m-6.93-4.937H3.1a.032.032 0 0 0-.034.033c0 1.048-.01 2.795-.01 6.829 0 .288-.269.262-.28.262h-.74c-.04.001-.044.004-.04.047.001.037.465 1.064.555 1.263.01.02.03.033.051.033.157.003.767.009.938-.014.153-.02.3-.06.438-.132.3-.156.49-.419.595-.765.052-.172.075-.353.075-.533q.003-3.495-.007-6.991a.03.03 0 0 0-.032-.032zm11.784 6.896q-.002-.02-.024-.022h-1.465c-.048-.001-.049-.002-.05-.049v-4.66c0-.072-.005-.07.07-.07h.863c.08 0 .075.004.075-.074V8.393c0-.082.006-.076-.08-.076h-3.5c-.064 0-.075-.006-.075.073v1.445c0 .083-.006.077.08.077h.854c.075 0 .07-.004.07.07v4.624c0 .095.008.084-.085.084-.37 0-1.11-.002-1.304 0-.048.001-.06.03-.06.03l-.697 1.519s-.014.025-.008.036.013.008.058.008q2.622.003 5.243.002c.03-.001.034-.006.035-.033zm4.177-3.43q0 .021-.02.024c-.346.006-.692.004-1.037.004q-.021-.003-.022-.024-.006-.651-.01-1.303c0-.072-.006-.071.07-.07l.733-.003c.041 0 .081.002.12.015.093.025.16.107.165.204.006.431.002 1.153.001 1.153m2.67.244a1.95 1.95 0 0 0-.883-.222h-.18c-.04-.001-.04-.003-.042-.04V10.21q.001-.198-.025-.394a1.8 1.8 0 0 0-.153-.53 1.53 1.53 0 0 0-.677-.71 2.2 2.2 0 0 0-1-.258c-.153-.003-.567 0-.72 0-.07 0-.068.004-.068-.065V7.76c0-.031-.01-.041-.046-.039H17.93s-.016 0-.023.007q-.008.008-.008.023v.546c-.008.036-.057.015-.082.022h-.95c-.022.002-.028.008-.03.032v1.481c0 .09-.004.082.082.082h.913c.082 0 .072.128.072.128v1.148s.003.117-.06.117h-1.482c-.068 0-.06.082-.06.082v1.445s-.01.068.064.068h1.457c.082 0 .076-.006.076.079v3.225c0 .088-.007.081.082.081h1.43c.09 0 .082.007.082-.08v-3.27c0-.029.006-.035.033-.035l2.323-.003a.7.7 0 0 1 .28.061.46.46 0 0 1 .274.407c.008.395.003.79.003 1.185 0 .259-.107.367-.33.367h-1.218c-.023.002-.029.008-.028.033q.276.655.57 1.303a.05.05 0 0 0 .04.026c.17.005.34.002.51.003.15-.002.517.004.666-.01a2 2 0 0 0 .408-.075c.59-.18.975-.698.976-1.313v-1.981q.001-.191-.034-.38c0 .078-.029-.641-.724-.998"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/Wang-Taoan" target="_blank" rel="noopener" title="Github丨Wang-Taoan" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.indexes", "navigation.expand", "toc.follow", "search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
