@@ -165,6 +165,8 @@ nav:
   - 随笔: 
     - ESSAY/index.md
     - 随笔记:
+      - 随笔记 | 2508: ESSAY/Jottings/2508.md
+      - 随笔记 | 2507: ESSAY/Jottings/2507.md
       - 随笔记 | 2506: ESSAY/Jottings/2506.md
       - 随笔记 | 2505: ESSAY/Jottings/2505.md
       - 随笔记 | 2504: ESSAY/Jottings/2504.md
@@ -211,7 +213,12 @@ nav:
         - 《走到人生边上:自问自答》: READ/SpecialCollection/《走到人生边上》.md
         - 《自卑与超越》: READ/SpecialCollection/Inferiority-and-transcendence.md
         - 《不负我心》: READ/SpecialCollection/bufuwoxin.md    
-
+  - 二次元:
+    - 2/index.md
+    - 苍之彼方的四重奏: 2/Aokana.md
+    - One PUNCH MAN: 2/OnePunchMan.md
+    - 天气之子: 2/weathering-with-you.md
+    
   - 转载:
     - REPRINT/index.md
     - 提问的智慧: REPRINT/how-to-ask-questions-the-smart-way.md
